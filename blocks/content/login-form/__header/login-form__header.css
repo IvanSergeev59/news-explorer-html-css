@@ -1,0 +1,11 @@
+@import url('__subtitle/login-form__subtitle.css');
+@import url('__form/login-form__text.css');
+@import url('__underline/login-form__underline.css');
+.login-form__header {
+width: 74.58%;
+display: flex;
+position: relative;
+flex-direction: column;
+margin-top: 22px;
+margin-left: 36px;
+}

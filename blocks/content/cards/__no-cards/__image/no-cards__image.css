@@ -1,0 +1,6 @@
+.no-cards__image {
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 80px;
+}

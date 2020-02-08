@@ -1,0 +1,9 @@
+@import url('__copyright/footer__copyright.css');
+@import url('__text/footer__text.css');
+@import url('__social/footer__social-left.css');
+@import url('__social/footer__social-right.css');
+.footer {
+display: flex;
+position: relative;
+margin-top: 80px;
+}

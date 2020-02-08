@@ -1,0 +1,12 @@
+@import url('card.css');
+.cards-block{
+	display: grid;
+	grid-template-columns: 400px 400px 400px;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+	width: 85.555%;
+	margin-left: 102px;
+	margin-right: 106px;
+	margin-top: 62px;
+	margin-bottom: 62px;
+}
