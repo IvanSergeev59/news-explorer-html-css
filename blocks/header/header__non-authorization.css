@@ -1,0 +1,11 @@
+@import url('white-text.css');
+@import url('__margin/non-authorization__margin.css');
+@import url('');
+.header__non-authorization {
+	display: none;
+	flex-direction: row;
+	margin: 0 auto;
+	margin-right: 140px;
+	position: relative;
+	color: white;
+}

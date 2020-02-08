@@ -1,0 +1,8 @@
+@import url('__left-side/about-author__left-side.css');
+@import url('__right-side/about-author__right-side.css');
+.about-author {
+display: flex;
+position: relative;
+width: 100%;
+padding-top: 80px;
+}

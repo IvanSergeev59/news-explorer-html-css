@@ -1,0 +1,23 @@
+
+.cards__found_more {
+	display: flex;
+	position: relative;
+	margin:0 auto;
+	margin-top: 64px;
+	margin-bottom: 80px;
+	width: 20%;
+	background: #FFFFFF;
+	border-radius: 80px;
+	justify-content: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #1A1B22;
+	border: none;
+}
+
+.cards__found_more:hover {
+	opacity: 0.9;
+}

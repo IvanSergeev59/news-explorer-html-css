@@ -1,0 +1,14 @@
+.cards__found_title {
+display: flex;
+position: relative;
+margin: 0 auto;
+margin-top: 80px;
+margin-left: 104px;
+width: 49.44%;
+font-family: Roboto Slab;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 46px;
+color: #1A1B22;
+}
