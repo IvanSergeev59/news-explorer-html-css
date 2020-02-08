@@ -1,8 +1,0 @@
-@import url('_title/cards__found_title.css');
-@import url('_more/cards__found_more.css');
-.cards__found {
-display: flex;
-position: relative;
-flex-direction: column;
-
-}
