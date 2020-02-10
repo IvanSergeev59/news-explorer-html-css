@@ -1,6 +1,6 @@
 @import url('white-text.css');
 @import url('__margin/non-authorization__margin.css');
-@import url('');
+
 .header__non-authorization {
 	display: none;
 	flex-direction: row;
