@@ -715,4 +715,4 @@ display: flex;
 position: relative;
 margin-top: 80px;
 }
-.page{display:flex;position:relative;width:1440px;flex-direction:column;margin:0 auto}@media (max-width:1440px){.page{display:flex;position:relative;width:1024px;flex-direction:column;margin:0 auto};}
+.page{display:flex;position:relative;width:1240px;flex-direction:column;margin:0 auto}@media (max-width:1440px){.page{display:flex;position:relative;width:1024px;flex-direction:column;margin:0 auto};}
