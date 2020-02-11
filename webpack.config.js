@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-                'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
+                'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
                 {
                         loader: 'image-webpack-loader',
                         options: {}
@@ -41,6 +41,11 @@ module.exports = {
       inject: false,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/index__second-page.html',
+      filename: 'index__second-page.html'
     }),
     new WebpackMd5Hash()
   ]
