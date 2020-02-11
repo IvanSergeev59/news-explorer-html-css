@@ -206,7 +206,7 @@ text-align: center;
 	height:576px;
 	position: relative;
 	flex-direction: column;
-	background-image: url(/images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+	background-image: url(./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
 }
 .about-author__left-side {
 	display: flex;
@@ -291,25 +291,25 @@ width: 49.44%;
 
 }
 .background-06{
-	background-image: url(/images/image_06.png);
+	background-image: url(./images/image_06.png);
 }
 .background-01{
-	background-image: url(/images/image_01.png);
+	background-image: url(./images/image_01.png);
 }
 .background-05{
-	background-image: url(/images/image_05.png);
+	background-image: url(./images/image_05.png);
 }
 .background-07{
-	background-image: url(/images/image_07.png);
+	background-image: url(./images/image_07.png);
 }
 .background-06{
-	background-image: url(/images/image_06.png);
+	background-image: url(./images/image_06.png);
 }
 .background-04{
-	background-image: url(/images/image_04.png);
+	background-image: url(./images/image_04.png);
 }
 .background-08{
-	background-image: url(/images/image_08.png);
+	background-image: url(./images/image_08.png);
 }
 .card__top-block {
 	display: flex;position: relative;
