@@ -206,7 +206,7 @@ text-align: center;
 	height:576px;
 	position: relative;
 	flex-direction: column;
-	background-image: url(./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+	background-image: url(images/images/d994bd8c575962cffc2a6d6e099c5f9e.png);
 }
 .about-author__left-side {
 	display: flex;
@@ -291,25 +291,25 @@ width: 49.44%;
 
 }
 .background-06{
-	background-image: url(./images/image_06.png);
+	background-image: url(images/images/8da1dadf8d8756774237068d1f5efed4.png);
 }
 .background-01{
-	background-image: url(./images/image_01.png);
+	background-image: url(images/images/7534cfe6e2eba24379ef6a372a4b85c6.png);
 }
 .background-05{
-	background-image: url(./images/image_05.png);
+	background-image: url(images/images/b393cb17cf48364e60ab9ef8c9c65fda.png);
 }
 .background-07{
-	background-image: url(./images/image_07.png);
+	background-image: url(images/images/d1820f5c4406ceb62b23bfbd3efd2837.png);
 }
 .background-06{
-	background-image: url(./images/image_06.png);
+	background-image: url(images/images/8da1dadf8d8756774237068d1f5efed4.png);
 }
 .background-04{
-	background-image: url(./images/image_04.png);
+	background-image: url(images/images/18c0592249bc62fc0e164e67bd495be9.png);
 }
 .background-08{
-	background-image: url(./images/image_08.png);
+	background-image: url(images/images/9d72f7868c0feeccbe6623f07fda4b03.png);
 }
 .card__top-block {
 	display: flex;position: relative;
