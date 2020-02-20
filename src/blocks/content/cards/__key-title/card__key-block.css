@@ -6,13 +6,25 @@
 .card__key-block {
 	background: #FFFFFF;
 	border-radius: 10px;
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 24px;
+	
 	color: #000000;
 		margin-top: 24px;
+		
 		height: 40px;
+		
 	justify-content: center;
+}
+
+@media (max-width: 1440px) {
+	.card__key-block {
+	background: #FFFFFF;
+	border-radius: 10px;
+	
+	color: #000000;
+		margin-top: 8px;
+		margin-right: 8px;
+		height: 40px;
+		
+	justify-content: center;
+}
 }

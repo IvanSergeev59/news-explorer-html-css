@@ -1,4 +1,8 @@
 .footer-right-text {
-	
-	width: 200px;
+width: 192px;
+}
+@media (max-width: 1440px) {
+.footer-right-text {
+	width:22.916%;
+}
 }

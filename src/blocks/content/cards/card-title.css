@@ -9,3 +9,18 @@
 	grid-column: 2/4;
 	grid-row: 5/6;
 }
+
+@media (max-width: 1440px) {
+	.card-title {
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 24px;
+	color: #1A1B22;
+		margin: 0;
+	grid-column: 2/4;
+	grid-row: 5/6;
+	overflow: hidden;
+}
+}

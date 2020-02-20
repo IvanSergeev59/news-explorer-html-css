@@ -8,3 +8,14 @@
 	padding:15px;
 width: 176px;
 }
+
+@media (max-width: 1440px) {
+	.non-authorization__margin{
+	margin: auto;
+	margin-right: 0px;
+	margin-left: 0px;
+	border: 1px solid;
+	box-sizing: border-box;
+	border-radius: 30px;
+	padding:8px;
+	width: 152px;

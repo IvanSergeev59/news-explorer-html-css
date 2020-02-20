@@ -1,6 +1,5 @@
 @import url('white-text.css');
 @import url('__margin/non-authorization__margin.css');
-
 .header__non-authorization {
 	display: none;
 	flex-direction: row;
@@ -9,3 +8,14 @@
 	position: relative;
 	color: white;
 }
+
+@media (max-width: 1440px) {
+	.header__non-authorization{
+			display: none;
+	flex-direction: row;
+	margin: 0 auto;
+	margin-right: 40px;
+	position: relative;
+	color: white;
+}
+	}

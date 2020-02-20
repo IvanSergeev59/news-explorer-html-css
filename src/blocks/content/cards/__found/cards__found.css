@@ -4,5 +4,18 @@
 display: flex;
 position: relative;
 flex-direction: column;
+width: 100%;
 
+}
+
+@media (max-width: 1440px) {
+	.cards__found {
+display: flex;
+position: relative;
+flex-direction: column;
+width: 100%;
+margin: 0 auto;
+padding-left: 40px;
+padding-right: 40px;
+}
 }

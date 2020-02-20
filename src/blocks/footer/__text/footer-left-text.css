@@ -1,6 +1,11 @@
 .footer-left-text {
+margin-left: 383px;
+width: 112px;
+}
+@media (max-width: 1440px) {
+	.footer-left-text {
+margin-left: 3.64%;
+width: 11.458%;
 
-margin-left: 320px;
-width: 120px;
-
+}
 }

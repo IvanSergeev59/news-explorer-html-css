@@ -9,3 +9,17 @@
 	border-radius: 30px;
 	height: 11.11%;
 }
+
+@media (max-width: 1440px) {
+	
+		.search__form {
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 48px;
+	width: 58.33%;
+	background: white;
+	border-radius: 30px;
+	height: 56px;
+	margin-left: 20.83%;
+}

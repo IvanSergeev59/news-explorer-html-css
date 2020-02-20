@@ -9,9 +9,20 @@
 .card{
 	display: grid;
 	grid-template-columns: 24px 128px 224px 24px;
-	grid-template-rows: 272px 20px 24px 12px 60px 16px auto auto 20px 24px;
+	grid-template-rows: 272px 20px 24px 12px auto 16px auto auto 20px 24px;
 	position: relative;
 	width: 400px;
 	height: 576px;
 	
+}
+@media (max-width: 1440px) {
+	.card{
+	display: grid;
+	grid-template-columns: 6.66% 53.33% 26.66% 6.66%;
+	grid-template-rows: 150px 16px 24px 12px 72px 10px 88px 12px 20px 16px;
+	position: relative;
+	width: 100%;
+	
+	
+}
 }

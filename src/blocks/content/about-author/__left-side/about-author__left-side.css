@@ -2,4 +2,19 @@
 	display: flex;
 	position: relative;
 	margin-left: 104px;
+	width: 30.20%;
+	height: 30.20%;
+	margin-bottom: 80px;
+}
+
+@media (max-width: 1440px) {
+.about-author__left-side {
+	display: flex;
+	position: relative;
+	margin-left: 40px;
+	width: 232px;
+	height: 232px;
+margin-bottom: 0px;
+margin-top: 61px;
+}
 }

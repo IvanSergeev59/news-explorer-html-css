@@ -2,3 +2,16 @@
 	margin-right: 34px;
 	margin-left: 0px;
 }
+
+@media (max-width: 1440px) {
+	.header-page-main__margin{
+	margin-right: 16px;
+	margin-left: 0px;
+}
+}
+@media (max-width: 768px) {
+.header-page-main__margin{
+	margin-right: 0;
+	margin-left: 0px;
+}
+}

@@ -1,3 +1,4 @@
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -19,18 +20,30 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // добавили минификацию CSS
+        use:  [
+          MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // добавили минификацию CSS,
+        
       },
       {
-        test: /\.(png|jpg|gif|ico|svg)$/,
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=./vendor/[name].[ext]'
+        },
+      {
+        
+        test: /\.(PNG|png|jpg|gif|ico|svg)$/,
         use: [
-                'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
-                {
-                        loader: 'image-webpack-loader',
-                        options: {}
-                },
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+        outputPath: "images",
+        publicPath: "images",
+              name: 'images/[contenthash].[ext]',
+             
+            }
+          }
         ]
-      }
+        },
     ]
   },
   plugins: [

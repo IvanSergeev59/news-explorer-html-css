@@ -11,3 +11,20 @@
 	margin-top: 160px;
 	width: 42.22%;
 }
+
+@media (max-width: 1440px) {
+	.search__title {
+	display: flex;
+	position: relative;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 40px;
+	color: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 104px;
+	margin-left: 20.83%;
+	width: 50%;
+}
+}

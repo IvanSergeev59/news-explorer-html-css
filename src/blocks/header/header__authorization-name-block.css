@@ -1,4 +1,5 @@
 @import url('white-text.css');
+@import url('logout-margin.css');
 .header__authorization-name-block {
 display: flex;
 position: relative;
@@ -10,4 +11,33 @@ border-radius: 30px;
 padding:15px;
 width: auto;
 
+}
+
+@media (max-width: 1440px) {
+	.header__authorization-name-block {
+display: flex;
+position: relative;
+margin:auto;
+margin-left:0px;
+border: 1px solid ;
+box-sizing: border-box;
+border-radius: 30px;
+padding:7px;
+width: auto;
+}
+}
+@media (max-width: 768px) {
+	.header__authorization-name-block {
+display: flex;
+position: relative;
+margin:auto;
+margin-left:16px;
+margin-top: 36px;
+margin-right: 16px;
+border: 1px solid ;
+box-sizing: border-box;
+border-radius: 30px;
+padding:7px;
+width: auto;
+}
 }

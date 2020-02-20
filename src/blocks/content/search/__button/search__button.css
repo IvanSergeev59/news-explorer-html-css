@@ -5,6 +5,13 @@
 	background: #2F71E5;
 	box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
 	border-radius: 30px;
-	width: 27.63%;
+	width: 35.71%;
 	height: 100%;
+	  border: 0;
+}
+.search__button:hover {
+	background: #347EFF;
+}
+.search__button:active {
+	background: #2A65CC;;
 }
