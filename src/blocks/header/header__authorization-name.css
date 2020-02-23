@@ -1,3 +1,4 @@
+@import url('authorization-name_image.css');
 .header__authorization-name{
 position: relative;
 font-family: Roboto;
@@ -10,7 +11,7 @@ margin: auto;
 text-align: center;
 }
 .header__authorization-name:hover {
-	cursor: url('../../images/lapka.png'), pointer;);
+	cursor: url('../../images/lapka.png'), pointer;
 }
 @media (max-width: 1440px) {
 	.header__authorization-name{
@@ -26,7 +27,7 @@ padding-right: 5px;
 text-align: center;
 }
 .header__authorization-name:hover {
-	cursor: url('../../images/lapka.png'), pointer;);
+	cursor: url('../../images/lapka.png'), pointer;
 }
 }
 
@@ -38,11 +39,11 @@ text-align: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 auto;
-    margin-right: 0px;
+
+   margin-right: 0px;
     text-align: center;
 }
 .header__authorization-name:hover {
-	cursor: url('../../images/lapka.png'), pointer;);
+	cursor: url('../../images/lapka.png'), pointer;
 }
 }

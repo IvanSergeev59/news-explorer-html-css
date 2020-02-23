@@ -1,4 +1,5 @@
 @import url('__title/header__title.css');
+@import url('__white-text/header__white-text.css');
 @import url('header__page.css');
 @import url('header__non-authorization.css');
 @import url('black-header.css');
@@ -44,6 +45,6 @@
 	height: 56px;
 	flex-direction: column;
 	z-index: 1;
-	background-color: #1A1B22;
+	
 }
 }

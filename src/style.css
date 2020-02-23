@@ -1,10 +1,14 @@
-@import url(vendor/normalize.css);
-@import url(vendor/fonts.css);
+@import url('vendor/normalize.css');
+@import url('vendor/fonts.css');
 
 @import url('blocks/header/header.css');
 @import url('blocks/content/content.css');
 @import url('blocks/footer/footer.css');
+a {
+  text-decoration: none;
 
+  cursor: url('images/lapka.png'), pointer;
+}
 .page {
  display: flex;
  position: relative;
@@ -16,8 +20,17 @@
 	.page {
  display: flex;
  position: relative;
- width: 1024px;
+ width: 100%;
    flex-direction: column;
    margin: 0 auto;
-};
+}
+}
+@media (max-width: 768px) {
+  .page {
+    display: flex;
+    position: relative;
+    width: 100% ;
+      flex-direction: column;
+      margin: 0 auto;
+   } 
 }

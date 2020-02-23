@@ -6,5 +6,5 @@
 	flex-direction: column;
 	position: relative;
 	margin:0 auto;
-
+	cursor: url('../../images/lapka.png'), pointer;
 }

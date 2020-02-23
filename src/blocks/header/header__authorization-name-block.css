@@ -30,14 +30,15 @@ width: auto;
 	.header__authorization-name-block {
 display: flex;
 position: relative;
-margin:auto;
-margin-left:16px;
+margin:0 auto;
 margin-top: 36px;
-margin-right: 16px;
+margin-bottom: 24px;
+justify-content: center;
 border: 1px solid ;
 box-sizing: border-box;
 border-radius: 30px;
 padding:7px;
-width: auto;
+width: 288px;
+height: 56px;
 }
 }
