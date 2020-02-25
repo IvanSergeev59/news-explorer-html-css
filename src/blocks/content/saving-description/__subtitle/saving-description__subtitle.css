@@ -3,6 +3,7 @@
 	position: relative;
 	margin-left: 104px;
 	margin-top: 30px;
+margin-bottom:56px;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
@@ -27,7 +28,7 @@
 		width: 92.78%;
 	}
 }
-@media (max-width: 7680px) {
+@media (max-width: 768px) {
 	.saving-description__subtitle{
 		display: flex;
 		position: relative;

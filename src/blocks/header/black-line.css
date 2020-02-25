@@ -1,3 +1,10 @@
 .black-line {
 	background: #1A1B22;
+
+}
+@media (max-width:768px) {
+.black-line {
+background: #E6E8EB;;
+top:-75px;
+}
 }

@@ -11,6 +11,9 @@
 @import url('__grey-text/header__grey-text.css');
 @import url('__mobile-back/header__mobile-back.css');
 @import url('__authorization/header__authorization.css');
+@import url('black-line.css');
+@import url('white-line.css');
+@import url('black-title.css');
 .header {
 	width:100%;
 	display: flex;
@@ -37,7 +40,7 @@
 	.header {
 	width:100%;
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	height: 56px;
 	flex-direction: column;
