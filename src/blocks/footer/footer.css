@@ -14,3 +14,14 @@ position: relative;
 margin-top: 61px;
 }
 }
+
+@media (max-width: 768px) {
+	.footer {
+display: flex;
+position: relative;
+flex-direction: column;
+width: 90%;
+margin: 0 auto;
+margin-top: 0px;
+}
+}

@@ -1,3 +1,4 @@
+@import url('black-title.css');
 .header__title {
 	position: absolute;
 	font-family: Roboto Slab;
@@ -31,12 +32,12 @@ position: absolute;
 
 @media (max-width: 768px) {
 	.header__title{
-	position: absolute;
+	position: fixed;
 	font-family: Roboto Slab;
 	font-style: normal;
 	font-weight: bold;
 	color: white;
-	z-index: 1;
+	z-index: 2;
 	margin: auto;
 	left: 16px;
 	top:16px;

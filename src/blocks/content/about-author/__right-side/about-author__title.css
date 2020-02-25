@@ -24,3 +24,18 @@
 	margin-top: 40px;
 }
 }
+
+@media (max-width: 768px) {
+	.about-author__title{
+	display: flex;
+	position: relative;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 40px;
+	color: #1A1B22;
+	width: 100%;
+	margin-top: 24px;
+}
+}

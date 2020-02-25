@@ -26,3 +26,18 @@
 	
 }
 }
+
+@media (max-width: 768px) {
+	.cards-block{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-row-gap: 10px;
+	margin: 0 auto;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 24px;
+	margin-bottom: 15px;
+	width: 90%;
+	
+}
+}

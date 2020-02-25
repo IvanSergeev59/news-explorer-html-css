@@ -1,0 +1,10 @@
+.authorization-name-block_logout-margin{
+	padding-right: 7px;
+}
+@media (max-width: 768px) {
+
+.logout-margin{
+	    margin: 0 auto;
+	margin-left: 2px;
+}
+}

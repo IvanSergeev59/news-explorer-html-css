@@ -7,23 +7,25 @@
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 	<link rel="shortcut icon" href="<%=require('./images/group.ico')%>" type="image/x-icon">
  </head>
- <body>
+ <body class="body">
 	
  	<div class="page">
- 		<header class="header border-grey">
+ 		<header class="header header__border-grey">
+			<img class="header__mobile-menu" src="<%=require('./images/menu-black.png')%>" alt="mobile-menu-button">
+			<img class="header__mobile-back" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
  			<div class="header__title black-title">NewsExplorer</div>
- 		<div class="header__authorization black-text">
- 				<div class="header__page header-page-main__margin">
+ 			<div class="header__authorization authorization_black-text">
+ 				<div class="header__page header__page_main-margin">
 			 		<p class="header__page_title ">Главная</p>
 			 		<div class="header__page_underline"></div>
 			 		</div>
-			 		<div class="header__page header-page__margin">
+			 		<div class="header__page header__page_margin">
 			 			<div class="header__page_title">Сохранённые статьи</div>
 			 		</div>
 			 		<div class="header__authorization-name-block">
 			 			<div class="header__authorization-name">Грета</div>
 			 		
-			 			<img src="images/logout-black.png">
+			 			<img class="authorization-name_image" src="<%=require('./images/logout-black.png')%>" alt="out-authorization button">
 					</div>
 				</div>
 			</header>
@@ -34,7 +36,7 @@
 					<h2 class="saving-description__subtitle">По ключевым словам: Природа, Тайга и 2 другим</h2>
 				</div>
 				<div class="cards">
-					<div class="cards-block">
+					<div class="cards__block">
 						<div class="card">
 							<div class="card__top-block background-06">
 								<div class="card__key-block right-key-block">
@@ -48,10 +50,10 @@
 								</div>
 							</div>
 							<div class="card__bottom-block"></div>
-							<h3 class="card-date">2 августа, 2019</h3>
-							<h2 class="card-title">Национальное достояние – парки</h2>
-							<p class="card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-							<h4 class="card-source">ДЗЕН</h4>
+							<h3 class="card__date">2 августа, 2019</h3>
+							<h2 class="card__title">Национальное достояние – парки</h2>
+							<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+							<h4 class="card__source">ДЗЕН</h4>
 						</div>
 						<div class="card">
 							<div class="card__top-block background-01">
@@ -66,10 +68,10 @@
 								</div>
 							</div>
 							<div class="card__bottom-block"></div>
-							<h3 class="card-date">2 августа, 2019</h3>
-							<h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-							<p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-							<h4 class="card-source">АФИША</h4>
+							<h3 class="card__date">2 августа, 2019</h3>
+							<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+							<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+							<h4 class="card__source">АФИША</h4>
 						</div>
 						<div class="card">
 							<div class="card__top-block background-05">
@@ -84,10 +86,10 @@
 								</div>
 							</div>
 							<div class="card__bottom-block"></div>
-							<h3 class="card-date">2 августа, 2019</h3>
-							<h2 class="card-title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-							<p class="card-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-							<h4 class="card-source">МЕДИАЗОНА</h4>
+							<h3 class="card__date">2 августа, 2019</h3>
+							<h2 class="card__title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+							<p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+							<h4 class="card__source">МЕДИАЗОНА</h4>
 						</div>
 						<div class="card">
 							<div class="card__top-block background-06">
@@ -103,10 +105,10 @@
 								
 							</div>
 							<div class="card__bottom-block"></div>
-							<h3 class="card-date">2 августа, 2019</h3>
-							<h2 class="card-title">Национальное достояние – парки</h2>
-							<p class="card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-							<h4 class="card-source">ДЗЕН</h4>
+							<h3 class="card__date">2 августа, 2019</h3>
+							<h2 class="card__title">Национальное достояние – парки</h2>
+							<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+							<h4 class="card__source">ДЗЕН</h4>
 						</div>
 					   <div class="card">
 							<div class="card__top-block background-01">
@@ -121,10 +123,10 @@
 								</div>
 							</div>
 							<div class="card__bottom-block"></div>
-							<h3 class="card-date">2 августа, 2019</h3>
-							<h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-							<p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-							<h4 class="card-source">АФИША</h4>
+							<h3 class="card__date">2 августа, 2019</h3>
+							<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+							<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+							<h4 class="card__source">АФИША</h4>
 						</div>
 					</div>
 				</div>
@@ -134,7 +136,8 @@
 				<div class="footer__copyright">&copy; 2019 Supersite
 				</div>
 				<p class="footer__text footer-left-text">Главная</p><p class="footer__text footer-right-text">Яндекс.Практикум</p>
- 			<img class="footer__social-left" src="images/github.png"><img class="footer__social-right" src="images/fb.png">
+			 <img class="footer__social-left" src="<%=require('./images/github.png')%>" alt="github-icon">
+			 <img class="footer__social-right" src="<%=require('./images/fb.png')%>" alt="fb-icon">
  		</footer>
 	 </div>
 	 <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>

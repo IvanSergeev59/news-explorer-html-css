@@ -1,8 +1,22 @@
 .footer-right-text {
 width: 192px;
+margin-bottom: 28px;
+margin-top: 30px;
 }
 @media (max-width: 1440px) {
 .footer-right-text {
 	width:22.916%;
+	margin-top: 22px;
 }
 }
+
+@media (max-width: 768px) {
+	.footer-right-text {
+		width:100%;
+		margin: 0;
+		margin-top: 50px;
+		margin-bottom: 82px;
+	}
+	}
+
+	

@@ -17,3 +17,14 @@ padding-top: 61px;
 margin-bottom: 0px;
 } 
 }
+
+@media (max-width: 768px) {
+	.about-author {
+display: flex;
+position: relative;
+flex-direction: column;
+width: 100%;
+padding-top: 32px;
+margin-bottom: 80px;
+} 
+}

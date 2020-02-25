@@ -20,3 +20,15 @@
 width: auto;
 }
 }
+
+@media (max-width: 768px) {
+	.about-author__right-side {
+	display: flex;
+	position: relative;
+
+	flex-direction: column;
+
+	margin:0 auto;
+width: 90%;
+}
+}

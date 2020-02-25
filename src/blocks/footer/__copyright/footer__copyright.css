@@ -30,3 +30,20 @@
 }
 
 }
+
+@media (max-width: 768px) {
+	.footer__copyright {
+	display: flex;
+	position: absolute;
+	margin: 0;
+	bottom:22px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #B6BCBF;
+	width: 100%;
+}
+
+}

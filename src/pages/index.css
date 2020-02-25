@@ -26,8 +26,8 @@
  width: 100%;
    flex-direction: column;
    margin: 0 auto;
-};
-};
+}
+}
 @media (max-width: 768px) {
 	.body{
  display: flex;	

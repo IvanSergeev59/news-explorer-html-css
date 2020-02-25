@@ -1,6 +1,6 @@
-@import url('__subtitle/login-form__subtitle.css');
-@import url('__form/login-form__text.css');
-@import url('__underline/login-form__underline.css');
+@import url('_subtitle/login-form__header_subtitle.css');
+@import url('_text/login__form_text.css');
+@import url('_underline/login-form__header_underline.css');
 .login-form__header {
 width: 74.58%;
 display: flex;

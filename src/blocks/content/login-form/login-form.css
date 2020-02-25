@@ -1,8 +1,11 @@
 @import url('__title/login-form__title.css');
 @import url('__header/login-form__header.css');
 @import url('__button/login-form__button.css');
-@import url('login-form__close.css');
+@import url('__close/login-form__close.css');
 @import url('__signup/login-form__signup.css');
+@import url('__signup/login-form__signup-enter.css');
+@import url('__error/login-form__error.css');
+
 @import url('link.css');
 @import url('form-error.css');
 .login-form {

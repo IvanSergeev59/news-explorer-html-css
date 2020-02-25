@@ -24,3 +24,19 @@
 	margin-left: 20.83%;
 }
 }
+
+
+@media (max-width: 768px) {
+	
+	.search__form {
+display: flex;
+position: relative;
+flex-direction: column;
+margin-top: 122px;
+width: 90%;
+
+border-radius: 30px;
+height: 56px;
+margin-left: 5%;
+}
+}

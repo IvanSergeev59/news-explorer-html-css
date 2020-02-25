@@ -1,7 +1,3 @@
-
-@import url('saving-description__title.css');
-@import url('saving-description__subtitle.css');
-@import url('saving-description__navigation.css');
-.saving-description{
-
-}
+@import url('__title/saving-description__title.css');
+@import url('__subtitle/saving-description__subtitle.css');
+@import url('__navigation/saving-description__navigation.css');

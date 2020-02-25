@@ -8,7 +8,24 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: #B6BCBF;
+	
 	width: 61.84%;
 	border:none;
 	}
 
+	@media (max-width: 768px) {
+		.search__form_text-default{
+			display: flex;
+			position: relative;
+			margin-top:16px;
+			margin-left: 16px;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 22px;
+			color: #B6BCBF;
+			width: 90%;
+			border:none;
+			}
+		}

@@ -11,15 +11,17 @@
 
 	<body class="body">
 		<div class="page">
-			<header class="header border-white">
+			<header class="header header__border-white">
+				<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
+				<img class="header__mobile-back" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
 				<div class="header__title">NewsExplorer</div>
-				<div class="header__authorization header__white-text">
-					<div class="header__page header-page-main__margin">
+				<div class="header__authorization header__white-back">
+					<div class="header__page header__page_main-margin">
 						<p class="header__page_title ">Главная</p>
 						<div class="header__page_underline"></div>
 						</div>
-						<div class="header__page header-page__margin">
-							<div class="header__page_title grey-text"><a href="index__second-page.html">Сохранённые статьи</a></div>
+						<div class="header__page header__page_margin">
+							<div class="header__page_title header__grey-text"><a href="index__second-page.html">Сохранённые статьи</a></div>
 						</div>
 						<div class="header__authorization-name-block">
 							<div class="header__authorization-name ">Грета</div>
@@ -27,12 +29,12 @@
 						</div>
 					</div>
 				   <div class="header__non-authorization">
-						<div class="header__page header-page__margin">
+						<div class="header__page header__page_margin">
 							<p class="header__page_title">Главная</p>
 							<div class="header__page_underline"></div>
 						</div>
 						<div class="non-authorization__margin">
-							<div class="header__authorization-name white-text">Авторизоваться</div>
+							<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
 						</div>
 								
 					</div>
@@ -56,7 +58,7 @@
  				</div>
  				<div class="cards__found">
  					<h2 class="cards__found_title">Результаты поиска</h2>
- 					<div class="cards-block">
+ 					<div class="cards__block">
 	 					<div class="card">
 	 						<div class="card__top-block background-08">
 	 							<div class="card__key-block right-key-block">
@@ -64,10 +66,10 @@
  								</div>
 	 						</div>
 	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card-date">2 августа, 2019</h3>
-	 						<h2 class="card-title">Национальное достояние – парки</h2>
-	 						<p class="card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-	 						<h4 class="card-source">ДЗЕН</h4>
+	 						<h3 class="card__date">2 августа, 2019</h3>
+	 						<h2 class="card__title">Национальное достояние – парки</h2>
+	 						<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+	 						<h4 class="card__source">ДЗЕН</h4>
 	 					</div>
 	 					<div class="card">
 	 						<div class="card__top-block background-04">
@@ -80,10 +82,10 @@
  							
 	 						
 	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card-date">2 августа, 2019</h3>
-	 						<h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-	 						<p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-	 						<h4 class="card-source">АФИША</h4>
+	 						<h3 class="card__date">2 августа, 2019</h3>
+	 						<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
+	 						<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+	 						<h4 class="card__source">АФИША</h4>
 	 					</div>
 	 					<div class="card">
 	 						<div class="card__top-block background-07">
@@ -95,10 +97,10 @@
  							</div>
 	 						</div>
 	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card-date">2 августа, 2019</h3>
-		 					<h2 class="card-title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-	 						<p class="card-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-	 						<h4 class="card-source">МЕДИАЗОНА</h4>
+	 						<h3 class="card__date">2 августа, 2019</h3>
+		 					<h2 class="card__title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+	 						<p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+	 						<h4 class="card__source">МЕДИАЗОНА</h4>
 	 					</div>
 	 				</div>
 	 				<button class="cards__found_more">
@@ -117,14 +119,14 @@
 						<h2 class="login-form__title">Вход</h2>
 						<form class="login-form__header">
 							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login-form__text" placeholder="Введите почту"></input>
-							<div class="login-form__underline"></div>
+							<input class="login__form_text" placeholder="Введите почту"></input>
+							<div class="login-form__header_underline"></div>
 						</form>
-						<p class="form-error">Неправильный формат email</p>
+						<p class="login-form__error">Неправильный формат email</p>
 						<form class="login-form__header">
 								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login-form__text" placeholder="Введите пароль"></input>
-								<div class="login-form__underline"></div>
+								<input class="login__form_text" placeholder="Введите пароль"></input>
+								<div class="login-form__header_underline"></div>
 						</form>
 						
 						<button class="login-form__button button-active" >
@@ -133,40 +135,40 @@
 						<h3 class="login-form__signup">или Зарегистрироваться</h3>
 						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close">
 					</div>
-					<div class="login-form inactive">
+					<div class="login-form-register">
 					   <h2 class="login-form__title">Регистрация</h2>
 					   <form class="login-form__header">
-						   <h3 class="login-form__subtitle">Email</h3>
-						   <input class="login-form__text" placeholder="Введите почту"></input>
-						   <div class="login-form__underline"></div>
+						   <h3 class="login-form__header_subtitle">Email</h3>
+						   <input class="login__form_text" placeholder="Введите почту"></input>
+						   <div class="login-form__header_underline"></div>
 					   </form>
-					   <p class="form-error form-error__margin-email">Неправильный формат email</p>
+					   <p class="login-form__error form-error__margin-email">Неправильный формат email</p>
 					   <form class="login-form__header">
-							   <h3 class="login-form__subtitle">Пароль</h3>
-							   <input class="login-form__text" placeholder="Введите пароль"></input>
-							   <div class="login-form__underline"></div>
+							   <h3 class="login-form__header_subtitle">Пароль</h3>
+							   <input class="login__form_text" placeholder="Введите пароль"></input>
+							   <div class="login-form__header_underline"></div>
 					   </form>
 					   
 					   <form class="login-form__header">
-							   <h3 class="login-form__subtitle">Имя</h3>
-							   <input class="login-form__text" placeholder="Введите своё имя"></input>
-							   <div class="login-form__underline"></div>
+							   <h3 class="login-form__header_subtitle">Имя</h3>
+							   <input class="login__form_text" placeholder="Введите своё имя"></input>
+							   <div class="login-form__header_underline"></div>
 					   </form>
-					   <p class="form-error form-error__margin-register">Такой пользователь уже есть</p>
+					   <p class="login-form__error form-error__margin-register">Такой пользователь уже есть</p>
 					   <button class="login-form__button button-active" >
 						   <h3 class="button_name">Зарегистрироваться</h3>
 					   </button>
-					   <h3 class="login-form__signup">или Войти</h3>
-						<img class="login-form__close" src="<%=require('./images/back-white.png')%>">
+					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Войти</a></h3>
+						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button">
 					</div>
   			
 					<footer class="footer">
 						<p class="footer__copyright">&copy; 2020 Supersite, Powered by News API
 						</p>
-						<p class="footer-left-text footer__text ">Главная</p>
-						<p class="footer-right-text footer__text ">Яндекс.Практикум</p>
-					<img class="footer__social-left" src="<%=require('./images/github.png')%>" alt="github mark">
-					<img class="footer__social-right" src="<%=require('./images/fb.png')%>" alt="fb mark">
+						<a class="footer-left-text footer__text ">Главная</a>
+						<a class=" footer__text footer-right-text">Яндекс.Практикум</a>
+					<img class="footer__social-left" src="<%=require('./images/github.png')%>" alt="github-icon">
+					<img class="footer__social-right" src="<%=require('./images/fb.png')%>" alt="fb-icon">
 				</footer>
 			</div>
 			<script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>

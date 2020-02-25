@@ -1,0 +1,15 @@
+a {
+	color:#B6BCBF;
+}
+.header__grey-text {
+	color: #B6BCBF;
+}
+
+@media (max-width: 768px) {
+	.grey-text {
+	color: #FFFFFF;
+}
+a {
+	color:#FFFFFF;
+}
+}

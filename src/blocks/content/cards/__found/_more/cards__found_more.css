@@ -16,11 +16,12 @@
 	line-height: 24px;
 	color: #1A1B22;
 	border: none;
+	cursor: url('../../../../../images/lapka.png') , pointer;
 }
 
 .cards__found_more:hover {
 	opacity: 0.9;
-	cursor: url('../../../../../images/lapka.png' , pointer);
+	
 }
 
 @media (max-width: 1440px) {
@@ -42,10 +43,39 @@
 	line-height: 24px;
 	color: #1A1B22;
 	border: none;
+	cursor: url('../../../../../images/lapka.png'), pointer;
 }
 
 .cards__found_more:hover {
 	opacity: 0.9;
-	cursor: url('../../../../../images/lapka.png'), pointer);
+
 }
 }
+
+@media (max-width: 768px) {
+
+	.cards__found_more {
+		display: flex;
+		position: relative;
+		margin:0 auto;
+	
+		margin-bottom: 32px;
+		width: 90%;
+		background: #FFFFFF;
+		border-radius: 80px;
+		justify-content: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		color: #1A1B22;
+		border: none;
+		cursor: url('../../../../../images/lapka.png'), pointer;
+	}
+	
+	.cards__found_more:hover {
+		opacity: 0.9;
+		
+	}
+	}

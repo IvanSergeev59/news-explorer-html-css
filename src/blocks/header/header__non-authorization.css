@@ -4,7 +4,7 @@
 	display: none;
 	flex-direction: row;
 	margin: 0 auto;
-	margin-right: 140px;
+	margin-right: 104px;
 	position: relative;
 	color: white;
 }
@@ -19,3 +19,17 @@
 	color: white;
 }
 	}
+
+	@media (max-width: 768px) {
+		.header__non-authorization{
+				display: none;
+
+		color: white;
+		position: relative;
+	flex-direction: column;
+	width: 100%;
+	margin:0 auto;
+	margin-right: 40px;
+	background:#1A1B22;;
+	}
+		}

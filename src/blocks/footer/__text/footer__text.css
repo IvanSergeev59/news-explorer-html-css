@@ -10,6 +10,28 @@
 	line-height: 24px;
 	text-align: center;
 	color: #1A1B22;
-	margin-top: 30px;
-	margin-bottom: 28px;
+	cursor: url('../../../images/lapka.png'), pointer;
+	
+}
+.footer__text:hover {
+	opacity: 0.9;
+}
+@media (max-width: 768px) {
+	.footer__text {
+		display: flex;
+		position: relative;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		color: #1A1B22;
+		cursor: url('../../../images/lapka.png'), pointer;
+
+	
+	}
+	.footer__text:hover {
+		opacity: 0.9;
+	}
 }
