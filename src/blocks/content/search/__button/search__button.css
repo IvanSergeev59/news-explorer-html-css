@@ -9,6 +9,14 @@
 	height: 100%;
 	  border: 0;
 	  cursor: url('../../../../images/lapka.png'), pointer;
+	  font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	align-items: center;
+justify-content: center;
+	color: #FFFFFF;
 }
 .search__button:hover {
 	background: #347EFF;
@@ -20,10 +28,10 @@
 @media (max-width: 768px) {
 	.search__button {
 		display: flex;
-		position: relative;
+		position: absolute;
 		margin: 0 auto;
-		margin-top: 32px;
-	
+		top: 72px;
+		height: 56px;
 		background: #2F71E5;
 		box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
 		border-radius: 30px;

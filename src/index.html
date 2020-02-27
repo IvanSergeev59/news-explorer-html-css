@@ -2,22 +2,22 @@
 <html lang="ru">
  <head>	
  	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ivan Sergeev"> 
+	<meta name="description" content="news-explorer">
 	<title>news-explorer</title>
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 	<link rel="shortcut icon" href="<%=require('./images/group.ico')%>" type="image/x-icon">
  </head>
- <body>
-
 	<body class="body">
 		<div class="page">
 			<header class="header header__border-white">
 				<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
-				<img class="header__mobile-back" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
+				<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
 				<div class="header__title">NewsExplorer</div>
-				<div class="header__authorization header__white-back">
+				<div class="header__authorization header__white-back ">
 					<div class="header__page header__page_main-margin">
-						<p class="header__page_title ">Главная</p>
+						<a class="header__page_title" href="index.html">Главная</a>
 						<div class="header__page_underline"></div>
 						</div>
 						<div class="header__page header__page_margin">
@@ -25,7 +25,7 @@
 						</div>
 						<div class="header__authorization-name-block">
 							<div class="header__authorization-name ">Грета</div>
-						 <img class="authorization-name_image" src="<%=require('./images/logout-white.png')%>">
+						 <img class="authorization-name_image" src="<%=require('./images/logout-white.png')%>" alt="auth-image"> 
 						</div>
 					</div>
 				   <div class="header__non-authorization">
@@ -38,22 +38,22 @@
 						</div>
 								
 					</div>
-				</header>
+			</header>
 				<div class="content">
 					<div class="search">
 						<h1 class="search__title">Что в мире творится?</h1>
 						<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
 						<form class="search__form">
-							<input type="text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" class="search__form_text-default" placeholder="Введите тему новости"></input>
+							<input type="text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" class="search__form_text-default" placeholder="Введите тему новости">
 							<button class="search__button">
-								<p class="search__button-text">Искать</p>
+								Искать
 							</button>
 						</form>
 					</div>
 					<div class="cards">
-						<div class="cards__no-cards">
-							<img class="no-cards__image" src="<%=require('./images/not-found_v1.png')%>">
-							h2 class="no-cards__title">Ничего не найдено</h2>
+						<div class="cards__no-cards inactive">
+							<img class="no-cards__image" src="<%=require('./images/not-found_v1.png')%>" alt="no-cards">
+							<h2 class="no-cards__title">Ничего не найдено</h2>
  					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
  				</div>
  				<div class="cards__found">
@@ -104,7 +104,7 @@
 	 					</div>
 	 				</div>
 	 				<button class="cards__found_more">
-	 					<p>Показать ещё<p>
+	 					Показать ещё
 	 				</button>	
  				</div>
  			</div>
@@ -114,54 +114,54 @@
 							<h2 class="about-author__title">Об авторе</h2>
 								<p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>  <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
 						</div>
-					</div>
+			</div>
 					<div class="login-form inactive">
 						<h2 class="login-form__title">Вход</h2>
 						<form class="login-form__header">
 							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login__form_text" placeholder="Введите почту"></input>
+							<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
 							<div class="login-form__header_underline"></div>
 						</form>
 						<p class="login-form__error">Неправильный формат email</p>
 						<form class="login-form__header">
 								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login__form_text" placeholder="Введите пароль"></input>
+								<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
 								<div class="login-form__header_underline"></div>
 						</form>
 						
 						<button class="login-form__button button-active" >
-							<h3 class="button_name">Войти</h3>
+							Войти
 						</button>
-						<h3 class="login-form__signup">или Зарегистрироваться</h3>
+						<h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Зарегистрироваться</a></h3>
 						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close">
 					</div>
-					<div class="login-form-register">
+					<div class="login-form-register inactive">
 					   <h2 class="login-form__title">Регистрация</h2>
 					   <form class="login-form__header">
 						   <h3 class="login-form__header_subtitle">Email</h3>
-						   <input class="login__form_text" placeholder="Введите почту"></input>
+						   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
 						   <div class="login-form__header_underline"></div>
 					   </form>
 					   <p class="login-form__error form-error__margin-email">Неправильный формат email</p>
 					   <form class="login-form__header">
 							   <h3 class="login-form__header_subtitle">Пароль</h3>
-							   <input class="login__form_text" placeholder="Введите пароль"></input>
+							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
 							   <div class="login-form__header_underline"></div>
 					   </form>
 					   
 					   <form class="login-form__header">
 							   <h3 class="login-form__header_subtitle">Имя</h3>
-							   <input class="login__form_text" placeholder="Введите своё имя"></input>
+							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите своё имя">
 							   <div class="login-form__header_underline"></div>
 					   </form>
 					   <p class="login-form__error form-error__margin-register">Такой пользователь уже есть</p>
 					   <button class="login-form__button button-active" >
-						   <h3 class="button_name">Зарегистрироваться</h3>
+						   Зарегистрироваться
 					   </button>
 					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Войти</a></h3>
 						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button">
 					</div>
-  			
+  				</div>
 					<footer class="footer">
 						<p class="footer__copyright">&copy; 2020 Supersite, Powered by News API
 						</p>

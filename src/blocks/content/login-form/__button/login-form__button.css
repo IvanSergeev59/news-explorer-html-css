@@ -2,12 +2,19 @@
 @import url('button-active.css');
 @import url('button-inactive.css');
 .login-form__button {
+	
 	width: 358px;
 	margin: 0 auto;
-	margin-top: 24px;	
+	margin-top: 32px;	
 	border-radius: 100px;
 	border:none;
 	cursor: url('../../../../images/lapka.png'), pointer;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	height: 64px;
 }
 
 .login-form__button:hover {
@@ -16,4 +23,31 @@
 
 .login-form__button:active {
 	background: #2A65CC;;
+}
+
+@media (max-width:768px) {
+	.login-form__button {
+		
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 23px;	
+		margin-left: 5%;
+		border-radius: 100px;
+		border:none;
+		cursor: url('../../../../images/lapka.png'), pointer;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		
+	}
+	
+	.login-form__button:hover {
+		background: #347EFF;
+	}
+	
+	.login-form__button:active {
+		background: #2A65CC;;
+	}
 }

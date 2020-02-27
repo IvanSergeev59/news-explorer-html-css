@@ -8,7 +8,7 @@
 }
     @media (max-width: 768px) {
         .header__mobile-menu{
-        display: none;
+        display: flex;
 position: absolute;
 z-index: 1;
 right: 16px;

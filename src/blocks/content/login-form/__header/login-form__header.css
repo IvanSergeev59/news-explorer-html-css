@@ -9,3 +9,14 @@ flex-direction: column;
 margin-top: 22px;
 margin-left: 36px;
 }
+
+@media (max-width:768px) {
+    .login-form__header {
+        width: 90%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 22px;
+        margin-left: 5%;
+        }  
+}

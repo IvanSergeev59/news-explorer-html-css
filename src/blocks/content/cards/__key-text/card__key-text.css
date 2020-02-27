@@ -3,7 +3,8 @@
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 500;
-
+font-size: 10px;
+line-height: 12px;
 }
 @media (max-width: 1440px) {
 	.card__key-text {

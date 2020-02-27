@@ -1,24 +1,20 @@
-a {
-	color:#B6BCBF;
-}
-a:hover {
-color:white;
-}
 .header__grey-text {
 	color: #B6BCBF;
 }
+.header__grey-text a{
+	color: #B6BCBF;
+}
+
 .header__grey-text:hover{
 	color:#FFFFFF;
 }
+.header__grey-text:hover a{
+	color:#FFFFFF;
+}
+
 @media (max-width: 768px) {
 	.grey-text {
 	color: #FFFFFF;
-}
-a {
-	color:#FFFFFF;
-}
-a:hover {
-color:white;
 }
 
 }
