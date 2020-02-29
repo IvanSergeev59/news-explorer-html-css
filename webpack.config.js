@@ -21,7 +21,15 @@ module.exports = {
       {
         test: /\.css$/,
         use:  [
-          MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // добавили минификацию CSS,
+          {
+         loader: MiniCssExtractPlugin.loader, 
+          options: {
+            outputPath: "css",
+            publicPath: "css",
+          },
+        },
+          'css-loader', 'postcss-loader',
+        ] // добавили минификацию CSS,
         
       },
       {
@@ -50,6 +58,7 @@ module.exports = {
     new MiniCssExtractPlugin({ // 
       filename: 'style.[contenthash].css',
     }),
+  
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/index.html',
@@ -60,6 +69,7 @@ module.exports = {
       template: './src/index__second-page.html',
       filename: 'index__second-page.html'
     }),
+    
     new WebpackMd5Hash()
   ]
 };

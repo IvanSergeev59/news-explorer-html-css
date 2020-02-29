@@ -136,11 +136,14 @@
 				
 			</div>
 			<footer class="footer">
-				<div class="footer__copyright">&copy; 2019 Supersite
-				</div>
-				<p class="footer__text footer-left-text">Главная</p><p class="footer__text footer-right-text">Яндекс.Практикум</p>
-			 <img class="footer__social-left" src="<%=require('./images/github.png')%>" alt="github-icon">
-			 <img class="footer__social-right" src="<%=require('./images/fb.png')%>" alt="fb-icon">
+				<ul class="footer">
+				<li class="footer__copyright">&copy; 2019 Supersite
+				</li>
+				<li class="footer__text footer-left-text">Главная</li>
+				<li class="footer__text footer-right-text">Яндекс.Практикум</li>
+			 <li class="footer__social-left"><img src="<%=require('./images/github.png')%>" alt="github-icon"></li>
+			 <li class="footer__social-right"><img src="<%=require('./images/fb.png')%>" alt="fb-icon"></li>
+			 </ul>
  		</footer>
 	 </div>
 	 <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
