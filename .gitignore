@@ -6,4 +6,4 @@ config
 error
 request
 .idea/
-dist/
+/dist
