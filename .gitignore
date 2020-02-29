@@ -1,6 +1,4 @@
-/dist/
 node_modules
-
 config.js
 config
 *.log
@@ -8,3 +6,4 @@ config
 error
 request
 .idea/
+dist/
