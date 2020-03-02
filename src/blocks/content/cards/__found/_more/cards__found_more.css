@@ -1,0 +1,82 @@
+
+.cards__found_more {
+	display: flex;
+	position: relative;
+	margin:0 auto;
+height:64px;
+	margin-bottom: 80px;
+	width: 20%;
+	background: #FFFFFF;
+	border-radius: 80px;
+	align-items: center;
+justify-content: center ;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #1A1B22;
+	border: none;
+	cursor: url('../../../../../images/lapka.png') , pointer;
+}
+
+.cards__found_more:hover {
+	opacity: 0.9;
+	
+}
+
+@media (max-width: 1440px) {
+
+.cards__found_more {
+	display: flex;
+	position: relative;
+	margin:0 auto;
+height: 56px;
+	margin-bottom: 40px;
+	width: 20%;
+	background: #FFFFFF;
+	border-radius: 80px;
+	justify-content: center;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	color: #1A1B22;
+	border: none;
+	cursor: url('../../../../../images/lapka.png'), pointer;
+}
+
+.cards__found_more:hover {
+	opacity: 0.9;
+
+}
+}
+
+@media (max-width: 768px) {
+
+	.cards__found_more {
+		display: flex;
+		position: relative;
+		margin:0 auto;
+	
+		margin-bottom: 32px;
+		width: 90%;
+		background: #FFFFFF;
+		border-radius: 80px;
+		justify-content: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		color: #1A1B22;
+		border: none;
+		cursor: url('../../../../../images/lapka.png'), pointer;
+	}
+	
+	.cards__found_more:hover {
+		opacity: 0.9;
+		
+	}
+	}

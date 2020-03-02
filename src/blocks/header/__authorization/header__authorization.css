@@ -1,0 +1,29 @@
+@import url('_black-text/authorization_black-text.css');
+
+.header__authorization {
+	display: flex;
+	position: relative;
+	margin:0 auto;
+	margin-right: 104px;
+}
+
+@media (max-width: 1440px) {
+	.header__authorization {
+	display: flex;
+	position: relative;
+	margin:0 auto;
+	margin-right: 40px;
+}
+}
+@media (max-width: 768px) {
+	.header__authorization {
+	display: none;
+	position: fixed;
+	flex-direction: column;
+	width: 100%;
+	margin:0 auto;
+	margin-right: 40px;
+	z-index: 1;
+
+}
+}

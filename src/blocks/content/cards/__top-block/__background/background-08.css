@@ -1,0 +1,15 @@
+.background-08{
+	background-image: url('../../../../../images/desktop/image_08.png');
+}
+
+@media (max-width:1440px) {
+	.background-08{
+	background-image: url('../../../../../images/tablet/image_08.png');
+}
+}
+
+@media (max-width:768px) {
+	.background-08{
+	background-image: url('../../../../../images/mobile/image_08.png');
+}
+}

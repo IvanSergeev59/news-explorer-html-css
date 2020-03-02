@@ -1,0 +1,14 @@
+@import url('search/search.css');
+@import url('about-author/about-author.css');
+@import url('saving-description/saving-description.css');
+@import url('cards/cards.css');
+@import url('login-form/login-form.css');
+@import url('login-form/login-form-register.css');
+@import url('inactive.css');
+@import url('active.css');
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	
+}

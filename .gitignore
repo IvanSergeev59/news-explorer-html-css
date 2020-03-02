@@ -1,0 +1,10 @@
+node_modules
+/test
+config.js
+config
+*.log
+*.env
+error
+request
+.idea/
+/dist

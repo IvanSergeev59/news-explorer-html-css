@@ -1,0 +1,12 @@
+@import url('_underline/header__page_underline.css');
+@import url('_title/header__page_title.css');
+@import url('_margin/header__page_margin.css');
+@import url('_main-margin/header__page_main-margin.css');
+
+.header__page {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+		cursor: url('../../../images/lapka.png'), pointer;
+}
+

@@ -1,0 +1,10 @@
+@import url('__block/cards__block.css');
+@import url('__no-cards/cards__no-cards.css');
+@import url('__found/cards__found.css');
+@import url('card.css');
+.cards{
+	display: flex;
+	position: relative;
+	width: 100%;
+	background:#F5F6F7;;
+}

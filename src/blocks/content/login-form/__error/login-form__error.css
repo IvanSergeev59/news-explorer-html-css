@@ -1,0 +1,27 @@
+@import url('__margin-email/form-error__margin-email.css');
+@import url('__margin-register/form-error__margin-register.css');
+	.login-form__error {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	color: #FF0000;
+width: 40.232%;
+margin-left: 36px;
+margin-bottom:0px;
+}
+@media (max-width:768px) {
+	.login-form__error {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	color: #FF0000;
+width: 40.232%;
+margin-left: 17px;
+margin-bottom:0px;
+}
+
+}

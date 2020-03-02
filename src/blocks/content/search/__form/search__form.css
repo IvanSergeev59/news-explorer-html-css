@@ -1,0 +1,42 @@
+@import url('_text-default/search__form_text-default.css');
+.search__form {
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 64px;
+	width: 42.2%;
+	background: white;
+	border-radius: 30px;
+	height: 11.11%;
+}
+
+@media (max-width: 1440px) {
+	
+		.search__form {
+	display: flex;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 48px;
+	width: 58.33%;
+	background: white;
+	border-radius: 30px;
+	height: 56px;
+	margin-left: 20.83%;
+}
+}
+
+
+@media (max-width: 768px) {
+	
+	.search__form {
+display: flex;
+position: relative;
+flex-direction: column;
+margin-top: 122px;
+width: 90%;
+
+border-radius: 30px;
+height: 56px;
+margin-left: 5%;
+}
+}

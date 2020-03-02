@@ -1,0 +1,7 @@
+.login-form__close {
+	display: flex;
+position: fixed;
+left: 100%;
+top: 0%;
+transform: translate(0, -100%);
+}

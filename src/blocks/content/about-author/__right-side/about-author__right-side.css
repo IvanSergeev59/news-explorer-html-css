@@ -1,0 +1,34 @@
+@import url('about-author__title.css');
+@import url('about-author__text.css');
+.about-author__right-side {
+	display: flex;
+	position: relative;
+	margin-left: 56px;
+	flex-direction: column;
+	margin-bottom: 24px;
+	width: 41.66%;
+}
+
+@media (max-width: 1440px) {
+	.about-author__right-side {
+	display: flex;
+	position: relative;
+	margin-left: 32px;
+	flex-direction: column;
+
+	margin-right:40px;
+width: auto;
+}
+}
+
+@media (max-width: 768px) {
+	.about-author__right-side {
+	display: flex;
+	position: relative;
+
+	flex-direction: column;
+
+	margin:0 auto;
+width: 90%;
+}
+}

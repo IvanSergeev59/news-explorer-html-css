@@ -1,0 +1,30 @@
+.footer__social-right {
+	display: flex;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 3.631%;
+cursor: url('../../../images/lapka.png'), pointer;
+
+}
+.footer__social-right:hover {
+	opacity: 0.9;
+}
+@media (max-width: 768px) {
+	.footer__social-right {
+		display: flex;
+		position: absolute;
+		width: 20.21px;
+		height: 20px;
+		margin: 0px;
+		right: 5.625%;
+		top:22px;
+cursor: url('../../../images/lapka.png'), pointer;
+
+	}
+	.footer__social-right:hover {
+		opacity: 0.9;
+	}
+	}

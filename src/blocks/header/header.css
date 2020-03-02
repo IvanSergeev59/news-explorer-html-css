@@ -1,0 +1,50 @@
+@import url('__title/header__title.css');
+@import url('__white-back/header__white-back.css');
+@import url('__page/header__page.css');
+@import url('__non-authorization/header__non-authorization.css');
+@import url('__black-header/header__black-header.css');
+@import url('__border-grey/header__border-grey.css');
+@import url('__border-white/header__border-white.css');
+@import url('__authorization-name-block/header__authorization-name-block.css');
+@import url('__authorization-name/header__authorization-name.css');
+@import url('__mobile-menu/header__mobile-menu.css');
+@import url('__grey-text/header__grey-text.css');
+@import url('__mobile-back/header__mobile-back.css');
+@import url('__authorization/header__authorization.css');
+@import url('black-line.css');
+@import url('white-line.css');
+@import url('black-title.css');
+.header {
+	width:100%;
+	display: flex;
+	position: absolute;
+	top: 0px;
+	height: 80px;
+	flex-direction: row;
+	z-index: 1;
+}
+
+@media (max-width: 1440px) {
+	.header {
+	width:100%;
+	display: flex;
+	position: absolute;
+	top: 0px;
+	height: 66px;
+	flex-direction: row;
+	z-index: 1;
+}
+}
+
+@media (max-width: 768px) {
+	.header {
+	width:100%;
+	display: flex;
+	position: fixed;
+	top: 0px;
+	height: 56px;
+	flex-direction: column;
+	z-index: 1;
+	
+}
+}

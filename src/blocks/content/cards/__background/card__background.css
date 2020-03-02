@@ -1,0 +1,7 @@
+.card__background {
+	display: grid;position: relative;
+	background-image: url('../../../../images/image_06.png');
+	background-size: contain;
+	grid-column: 1/8;
+	grid-row:1/4;
+}

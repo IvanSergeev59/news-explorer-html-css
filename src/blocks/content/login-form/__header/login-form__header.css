@@ -1,0 +1,22 @@
+@import url('_subtitle/login-form__header_subtitle.css');
+@import url('_text/login__form_text.css');
+@import url('_underline/login-form__header_underline.css');
+.login-form__header {
+width: 74.58%;
+display: flex;
+position: relative;
+flex-direction: column;
+margin-top: 22px;
+margin-left: 36px;
+}
+
+@media (max-width:768px) {
+    .login-form__header {
+        width: 90%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 22px;
+        margin-left: 5%;
+        }  
+}

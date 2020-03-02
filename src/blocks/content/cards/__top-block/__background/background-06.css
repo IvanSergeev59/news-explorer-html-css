@@ -1,0 +1,17 @@
+.background-06{
+	background-image: url('../../../../../images/desktop/image_06.png');
+}
+
+@media (max-width:1440px) {
+	.background-06{
+		background-image: url('../../../../../images/tablet/image_06.png');
+		
+	}
+}
+
+@media (max-width:768px) {
+	.background-06{
+		background-image: url('../../../../../images/mobile/image_06.png');
+		
+	}
+}

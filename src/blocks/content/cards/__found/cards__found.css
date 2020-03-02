@@ -1,0 +1,21 @@
+@import url('_title/cards__found_title.css');
+@import url('_more/cards__found_more.css');
+.cards__found {
+display: flex;
+position: relative;
+flex-direction: column;
+width: 100%;
+
+}
+
+@media (max-width: 1440px) {
+	.cards__found {
+display: flex;
+position: relative;
+flex-direction: column;
+width: 100%;
+margin: 0 auto;
+padding-left: 0px;
+padding-right: 0px;
+}
+}

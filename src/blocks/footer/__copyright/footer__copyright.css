@@ -1,0 +1,49 @@
+.footer__copyright {
+	display: flex;
+	position: relative;
+	margin-left: 104px;
+	margin-top: 33px;
+	margin-bottom: 25px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #B6BCBF;
+	width: 433px;
+}
+
+@media (max-width: 1440px) {
+	.footer__copyright {
+	display: flex;
+	position: relative;
+	margin-left: 40px;
+	margin-top: 33px;
+	margin-bottom: 25px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #B6BCBF;
+	width: 39.06%;
+}
+
+}
+
+@media (max-width: 768px) {
+	.footer__copyright {
+	display: flex;
+	position: absolute;
+	margin: 0;
+	bottom:22px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #B6BCBF;
+	width: 100%;
+}
+
+}

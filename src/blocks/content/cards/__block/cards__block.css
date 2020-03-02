@@ -1,0 +1,43 @@
+
+.cards__block {
+	display: grid;
+	grid-template-columns: 400px 400px 400px;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+	width: 85.555%;
+	margin-left: 102px;
+	margin-right: 106px;
+	margin-top: 62px;
+	margin-bottom: 62px;
+}
+
+@media (max-width: 1440px) {
+	.cards__block {
+	display: grid;
+	grid-template-columns: 31.25% 31.25% 31.25%;
+	grid-column-gap: 8px;
+	grid-row-gap: 8px;
+	margin: 0 auto;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-top: 32px;
+	margin-bottom: 32px;
+	width: 98%;
+	
+}
+}
+
+@media (max-width: 768px) {
+	.cards__block {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-row-gap: 10px;
+	margin: 0 auto;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 24px;
+	margin-bottom: 15px;
+	width: 90%;
+	
+}
+}

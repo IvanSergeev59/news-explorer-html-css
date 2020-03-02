@@ -1,0 +1,39 @@
+.saving-description__title {
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 46px;
+	color: #1A1B22;
+	margin-top: 28px;
+	margin-left: 104px;
+	width: 36.80%;
+}
+
+@media (max-width: 1440px) {
+	.saving-description__title {
+		font-family: Roboto Slab;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 34px;
+		color: #1A1B22;
+		margin-top: 16px;
+		margin-left: 40px;
+		width: 43.75%;
+	}
+}
+
+@media (max-width: 768px) {
+	.saving-description__title {
+		font-family: Roboto Slab;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		line-height: 34px;
+		color: #1A1B22;
+		margin-top: 16px;
+		margin-left: 5%;
+		width: 90%;
+	}
+}

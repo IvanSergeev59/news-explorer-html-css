@@ -1,0 +1,6 @@
+.block-image__non-marked {
+	background-image: url('../../../../../images/Rectangle 8.png');
+}
+.block-image__non-marked:hover{
+	background-image: url('../../../../../images/Rectangle 7.png');
+}

@@ -1,0 +1,42 @@
+@import url('__title/search__title.css');
+@import url('__subtitle/search__subtitle.css');
+@import url('__form/search__form.css');
+@import url('__button/search__button.css');
+@import url('__button-text/search__button-text.css');
+.search {
+	display: flex;
+	width: 100%;
+	height:576px;
+	position: relative;
+	flex-direction: column;
+	background-image: url('../../../images/desktop/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+
+}
+
+@media (max-width: 1440px) {
+.search {
+	display: flex;
+	width: 100%;
+	height:400px;
+	position: relative;
+	flex-direction: column;
+	background-image: url('../../../images/tablet/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+}
+
+@media (max-width: 768px) {
+	.search {
+		display: flex;
+		width: 100%;
+		height:536px;
+		position: relative;
+		flex-direction: column;
+		background-image: url('../../../images/mobile/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}

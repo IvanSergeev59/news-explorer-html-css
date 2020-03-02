@@ -1,0 +1,18 @@
+.header__mobile-back {
+    display: none;
+}
+@media (max-width: 1440px) {
+    .header__mobile-back {
+        display: none;
+    }
+}
+    @media (max-width: 768px) {
+        .header__mobile-back{
+        display: flex;
+position: fixed;
+z-index: 2;
+right: 16px;
+top: 16px;
+width: 24px;
+    }
+}

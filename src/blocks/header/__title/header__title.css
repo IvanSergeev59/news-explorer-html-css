@@ -1,0 +1,47 @@
+@import url('black-title.css');
+.header__title {
+	position: absolute;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: bold;
+		z-index: 1;
+	margin: auto;
+	left: 104px;
+	top:30px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+@media (max-width: 1440px) {
+	.header__title{
+position: absolute;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	z-index: 1;
+	margin: auto;
+	left: 40px;
+	top:22.73px;
+	font-size: 20px;
+	line-height: 24px;
+	width: 200px;
+}
+	}
+
+@media (max-width: 768px) {
+	.header__title{
+	position: fixed;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+	z-index: 2;
+	margin: auto;
+	left: 16px;
+	top:16px;
+	font-size: 16px;
+	line-height: 24px;
+	width: 117px;
+}
+	}
