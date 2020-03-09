@@ -1,6 +1,6 @@
 @import url('_margin/non-authorization__margin.css');
 .header__non-authorization {
-	display: none;
+	display: flex;
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 104px;
@@ -10,7 +10,7 @@
 
 @media (max-width: 1440px) {
 	.header__non-authorization{
-			display: none;
+			display: flex;
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 40px;

@@ -15,7 +15,7 @@
 				<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
 				<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
 				<div class="header__title">NewsExplorer</div>
-				<div class="header__authorization header__white-back ">
+				<div class="header__authorization header__white-back inactive">
 					<div class="header__page header__page_main-margin">
 						<a class="header__page_title" href="index.html">Главная</a>
 						<div class="header__page_underline"></div>
@@ -33,7 +33,7 @@
 							<p class="header__page_title">Главная</p>
 							<div class="header__page_underline"></div>
 						</div>
-						<div class="non-authorization__margin">
+						<div class="non-authorization__margin" id="geg">
 							<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
 						</div>
 								
@@ -117,49 +117,49 @@
 			</div>
 					<div class="login-form inactive">
 						<h2 class="login-form__title">Вход</h2>
-						<form class="login-form__header">
+						<form class="login-form__header" name="loginEmail">
 							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
+							<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту" name="loginMail">
 							<div class="login-form__header_underline"></div>
 						</form>
 						<p class="login-form__error">Неправильный формат email</p>
-						<form class="login-form__header">
+						<form class="login-form__header" name="loginPass">
 								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
+								<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль" name="loginPas">
 								<div class="login-form__header_underline"></div>
 						</form>
 						
-						<button class="login-form__button button-active" >
+						<button class="login-form__button" >
 							Войти
 						</button>
-						<h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Зарегистрироваться</a></h3>
-						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close">
+						<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
+						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close" id="close2">
 					</div>
 					<div class="login-form-register inactive">
 					   <h2 class="login-form__title">Регистрация</h2>
-					   <form class="login-form__header">
+					   <form class="login-form__header" name="regEmail">
 						   <h3 class="login-form__header_subtitle">Email</h3>
-						   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
+						   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту" name="regMail">
 						   <div class="login-form__header_underline"></div>
 					   </form>
 					   <p class="login-form__error form-error__margin-email">Неправильный формат email</p>
-					   <form class="login-form__header">
+					   <form class="login-form__header" name="regPass">
 							   <h3 class="login-form__header_subtitle">Пароль</h3>
-							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
+							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль" name="regPas">
 							   <div class="login-form__header_underline"></div>
 					   </form>
 					   
-					   <form class="login-form__header">
+					   <form class="login-form__header" name="regName">
 							   <h3 class="login-form__header_subtitle">Имя</h3>
-							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите своё имя">
+							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите своё имя" name="regNam">
 							   <div class="login-form__header_underline"></div>
 					   </form>
 					   <p class="login-form__error form-error__margin-register">Такой пользователь уже есть</p>
-					   <button class="login-form__button button-active" >
+					   <button class="login-form__button" >
 						   Зарегистрироваться
 					   </button>
 					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Войти</a></h3>
-						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button">
+						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="close1" >
 					</div>
   				</div>
 					<footer class="footer">

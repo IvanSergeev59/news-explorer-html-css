@@ -1,10 +1,10 @@
- import {api} from "../modules/apiUrl.js";
+ import {api} from "ApiUrl.js";
  export class Article {
  	constructor(date, title, text, source) {
  		this.articleElement = this.createArticle (date, title, text, source);
  		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.addArticle);
  	}
- }
+ 
 
 addArticle(dateValue, titleValue, textValue, sourceValue) {
 	const article = document.createElement('div');
@@ -17,3 +17,4 @@ addArticle(dateValue, titleValue, textValue, sourceValue) {
 	const articleCardText = document.createElement('p');
 	const articleCardSource = document.createElement('h4');
 }
+ }

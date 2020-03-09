@@ -1,4 +1,4 @@
-import { serverUrl } from "../index.js";
+import {serverUrl} from "../modules/ApiUrl.js";
 export class Api {
 	constructor(options) {
 	this.options = options;
@@ -96,4 +96,5 @@ removeArticle(id) {
 			return Promise.reject(`Ошибка: ${res.status}`)
 		}
 	})
+}
 }
