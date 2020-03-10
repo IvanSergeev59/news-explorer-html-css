@@ -352,20 +352,25 @@ template {
 @font-face {
   font-family: "Roboto medium";
   font-style:  medium;
-  src: url(./vendor/roboto-medium-webfont.woff) format('woff');
+  src: url(css/./vendor/roboto-medium-webfont.woff) format('woff');
 }
 
 
 @font-face {
   font-family: "Roboto";
   font-style:  normal;
-  src: url(./vendor/roboto-regular-webfont.woff) format('woff');
+  src: url(css/./vendor/roboto-regular-webfont.woff) format('woff');
 }
 
 @font-face {
   font-family: "Roboto Slab";
   font-style:  normal;
-  src: url(./vendor/robotoslab-regular-webfont.woff) format('woff');
+  src: url(css/./vendor/robotoslab-regular-webfont.woff) format('woff');
+}
+@font-face {
+  font-family: "Arial";
+  font-style:  normal;
+  
 }
 
 .black-title {
@@ -572,7 +577,7 @@ width: 176px;
 }
 }
 .header__non-authorization {
-	display: none;
+	display: flex;
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 104px;
@@ -582,7 +587,7 @@ width: 176px;
 
 @media (max-width: 1440px) {
 	.header__non-authorization{
-			display: none;
+			display: flex;
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 40px;
