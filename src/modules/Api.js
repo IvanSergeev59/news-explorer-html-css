@@ -1,13 +1,17 @@
-import {serverUrl} from "../modules/ApiUrl.js";
+import {serverUrl} from "../modules/apiUrl.js"; 
+
+import {headerAuth, headerUserName,  headerNonAuth}  from "../modules/Const.js";
 export class Api {
-	constructor(options) {
+	constructor(options,token) {
 	this.options = options;
+	this.token = token;
 }
 /* add all cards from server */
 getCurrentArticles() {
-	return fetch(serverUrl + '/articles', {
+	return fetch(this.options.serverUrl + '/articles', {
 		headers: {
-			authorization: this.options.headers.authorization
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${this.token}`
 		},
 	})
 	.then((res) => {
@@ -21,9 +25,11 @@ getCurrentArticles() {
 }
 
 signUp(userEmail, userPassword, userName) {
-	return fetch(serverUrl + `/signup`, {
+	return fetch(this.options.serverUrl + `/signup`, {
 		method: 'POST',
-		headers: this.options.headers,
+		headers: {
+			'Content-Type': 'application/json',
+		},
 		body: JSON.stringify({
 			email: userEmail,
 			password: userPassword,
@@ -41,22 +47,21 @@ signUp(userEmail, userPassword, userName) {
 }
 
 signIn(userEmail, userPassword) {
-	return fetch(serverUrl + `signin`, {
+	return fetch(this.options.serverUrl + `/signin`, {
 		method:'POST',
-		headers:this.options.headers,
+		headers: {
+			'Content-Type': 'application/json',
+		},
 		body: JSON.stringify({
 			email:userEmail,
 			password: userPassword
 	})
 })
-	.then((res) => {
-		if (res.ok) {
-			res.json()
-		}
-		else {
-			return Promise.reject(`Ошибка: ${res.status}`)
-		}
+.then(res => res.json())
+	.then((data) => {
+		localStorage.setItem('token', data.token);
 	})
+	
 }
 addArticle(articleKeyword, articleTitle, articleText, articleDate, articleSource,articleLink, articleImage) {
 	return fetch(serverUrl + `articles`, {
@@ -80,13 +85,16 @@ addArticle(articleKeyword, articleTitle, articleText, articleDate, articleSource
 			return Promise.reject(`Ошибка: ${res.status}`)
 		}
 	})
+	
 }
 
 removeArticle(id) {
-	return fetch(serverUrl + `articles`, {
+	return fetch(this.options.serverUrl + `articles`+id, {
 		method:'DELETE',
-		headers:this.options.headers,
-
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${this.token}`
+    }
 	})
 	.then((res) => {
 		if (res.ok) {
@@ -97,4 +105,33 @@ removeArticle(id) {
 		}
 	})
 }
+search(name) {
+	const apiKey='ec6527c5735a46ef9160f129e37285aa';
+	const from = '2020-03-03';
+	const to = '2020-03-10';
+	const pageSize = '6';
+	const url = `http://newsapi.org/v2/everything?q=${name}&from=${from}&to=${to}&pageSize=${pageSize}&apiKey=${apiKey}`;
+	return fetch(url, {
+		method:'GET'})
+		.then(res =>{
+			if(res.ok) {
+				console.log(res);
+				return res.json();
+			}
+			return Promise.reject(`Ошибка: ${res.status}`)
+		})
+	}
+authorization() {
+	return fetch(this.options.serverUrl + `/users/me`, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${this.token}`
+    }
+})
+}
+
+
+
+
 }

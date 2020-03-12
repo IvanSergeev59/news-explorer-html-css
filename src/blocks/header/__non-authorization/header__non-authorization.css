@@ -21,13 +21,16 @@
 
 	@media (max-width: 768px) {
 		.header__non-authorization{
-				display: none;
+			display: flex;
+	position: fixed;
+
 
 		color: white;
 		position: relative;
 	flex-direction: column;
 	width: 100%;
 	margin:0 auto;
+top:56px;
 	margin-right: 40px;
 	background:#1A1B22;;
 	}

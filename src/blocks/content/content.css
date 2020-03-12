@@ -6,6 +6,7 @@
 @import url('login-form/login-form-register.css');
 @import url('inactive.css');
 @import url('active.css');
+@import url('login-form/register__success.css');
 .content {
 	display: flex;
 	flex-direction: column;
