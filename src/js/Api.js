@@ -111,7 +111,7 @@ search(name) {
 	const apiKey='ec6527c5735a46ef9160f129e37285aa';
 	const from = '2020-03-03';
 	const to = '2020-03-10';
-	const pageSize = '6';
+	const pageSize = '100';
 	const url = `http://newsapi.org/v2/everything?q=${name}&from=${from}&to=${to}&pageSize=${pageSize}&apiKey=${apiKey}`;
 	return fetch(url, {
 		method:'GET'})
