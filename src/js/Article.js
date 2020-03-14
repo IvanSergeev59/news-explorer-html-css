@@ -3,7 +3,7 @@
  	constructor(date, title, text, source, urlToImage) {
 		this.date=date;
 		 this.articleElement = this.createArticle (date, title, text, source, urlToImage);
-		 console.log(date)
+		 
 		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleConsole);
 		this.articleElement.querySelector('.card-block-image').addEventListener('mouseover', this.imageWinPopup);
 		this.articleElement.querySelector('.card-block-image').addEventListener('mouseout', this.imageWinPopupClose);
@@ -77,15 +77,16 @@ imageWinPopupClose() {
 }
 articleConsole() {
 	
+	
 	if(event.target.hasAttribute('saved')){
 
-const parent = event.target.closest('.card');
-const child = document.querySelector('#savingCards')
+const child = event.target.closest('.card');
+const parent = document.querySelector('#savingCards')
 
 function par(parent,child) {
 	parent.removeChild(child)
 }
-api.removeArticle(po.getAttribute('id'))
+api.removeArticle(child.getAttribute('id'))
 .then(() =>{
 par(parent,child)
 	
@@ -125,21 +126,5 @@ par(parent,child)
 	event.stopPropagation();
 }
 
-remove() {
-	const articleChild = event.target.closest('.card');
-	console.log('2')
-	function removeChild (parent, child) {
-		parent.removeChild(child);
-	}
-api.removeArticle(articleChild.getAttribute('id'))
-.then(() => {
-	removeChild(articleList, articleChild)
-})
 
-.catch((err) =>{ 
-	console.log(err);
-});
-  event.stopPropagation();
-
- }
 }
