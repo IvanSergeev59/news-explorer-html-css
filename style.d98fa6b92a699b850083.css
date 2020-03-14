@@ -1074,7 +1074,7 @@ margin-left: 5%;
 	line-height: 24px;
 	align-items: center;
 justify-content: center;
-	color: #FFFFFF;
+	color: #B6BCBF;
 }
 .search__button:hover {
 	background: #347EFF;
@@ -1906,6 +1906,10 @@ line-height: 14px;
 .block-image__non-marked:hover{
 	background-image: url(images/images/fdf55ce1253dc5e5fe089bbd0cc8a254.png);
 }
+.block-image__non-auth {
+	background-image: url(images/images/fdf55ce1253dc5e5fe089bbd0cc8a254.png);
+}
+
 .block-image__delete {
 	
 	background-image: url(images/images/45996bf0ab4e68b1c5a57053bd152306.png);
@@ -1923,8 +1927,9 @@ line-height: 14px;
 
 
 .key-text-hidden {
-	display: none;
+	display: flex;
 	margin-right: 5px;
+
 width:182px;
 }
 .card__key-block {
@@ -2839,6 +2844,7 @@ position: relative;
 @media (max-width: 1440px) {
 	.footer {
 display: flex;
+width:100%;
 position: relative;
 margin-top: 61px;
 }
