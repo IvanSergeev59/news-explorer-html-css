@@ -1,4 +1,5 @@
-import {loginEmailForm, searchButton, searchForm, searchError, loginEmailError, loginButton, loginPassError, regEmailError,regPasError, regNameError, registerEmailForm, registerButton} from "../modules/Const.js";
+import {loginEmailForm, searchButton, searchForm, searchError, loginEmailError, loginButton, loginPassError
+  , regEmailError,regPasError, regNameError, registerEmailForm, registerButton} from "../js/consts/const.js";
 
 export function validationLoginEmail(event) {
     const name = loginEmailForm.elements.loginMail.value;

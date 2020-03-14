@@ -1,4 +1,4 @@
-import {popupAuthWin, popupRegiWin, form__under} from "../modules/Const.js";
+import {popupAuthWin, popupRegiWin, form__under} from "../js/consts/const.js";
 export class PopupReg {
     constructor(popupRegi, popupRegClose, popupRegiEnter, form__under) {
         this.popupRegi = popupRegi;

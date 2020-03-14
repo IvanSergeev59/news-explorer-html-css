@@ -1,5 +1,5 @@
 import {api} from "./apiUrl";
-import {headerUserName} from "../modules/Const.js"
+import {headerUserName} from "../js/consts/const.js"
 export function getUserName() {
 	api.authorization()
 

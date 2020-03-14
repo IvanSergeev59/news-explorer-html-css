@@ -1,4 +1,4 @@
-import {popupAuthWin, form__under} from "../modules/Const.js";
+import {popupAuthWin, form__under} from "../js/consts/const.js";
 export class PopupName {
     constructor(popupAuth, popupAuthClose, form__under) {
 this.popupAuth = popupAuth;

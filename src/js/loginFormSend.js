@@ -1,6 +1,6 @@
-import {buttonLoginLoading} from "../modules/buttonLoading.js";
-import {api} from "../modules/apiUrl.js";
-import {popupAuthWin} from "../modules/Const.js";
+import {buttonLoginLoading} from "../js/buttonLoading.js";
+import {api} from "../js/apiUrl.js";
+import {popupAuthWin} from "../js/consts/const.js";
 
 
 export function loginFormSend(event) {

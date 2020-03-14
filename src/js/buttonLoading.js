@@ -1,4 +1,5 @@
-import {loginButton, registerButton, searchButton} from "../modules/Const.js";
+import {loginButton, registerButton, searchButton} from "../js/consts/const.js";
+
 function buttonLoginLoading (){
 loginButton.textContent = 'Загрузка...';
 

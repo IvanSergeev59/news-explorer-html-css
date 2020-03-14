@@ -1,6 +1,6 @@
-import {serverUrl} from "../modules/apiUrl.js"; 
+import {serverUrl} from "../js/apiUrl.js"; 
 
-import {headerAuth, headerUserName,  headerNonAuth}  from "../modules/Const.js";
+import {headerAuth, headerUserName,  headerNonAuth}  from "../js/consts/const.js";
 export class Api {
 	constructor(options,token) {
 	this.options = options;
@@ -8,7 +8,7 @@ export class Api {
 }
 /* add all cards from server */
 getCurrentArticles() {
-	return fetch(this.options.serverUrl + '/articles', {
+	return fetch(this.options + '/articles', {
 		headers: {
 			'Content-Type': 'application/json',
 			'Authorization': `Bearer ${this.token}`
@@ -25,7 +25,7 @@ getCurrentArticles() {
 }
 
 signUp(userEmail, userPassword, userName) {
-	return fetch(this.options.serverUrl + `/signup`, {
+	return fetch(this.options + `/signup`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ signUp(userEmail, userPassword, userName) {
 }
 
 signIn(userEmail, userPassword) {
-	return fetch(this.options.serverUrl + `/signin`, {
+	return fetch(this.options + `/signin`, {
 		method:'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -55,8 +55,7 @@ signIn(userEmail, userPassword) {
 		body: JSON.stringify({
 			email:userEmail,
 			password: userPassword
-	})
-})
+	})})
 .then(res => res.json())
 	.then((data) => {
 		localStorage.setItem('token', data.token);
@@ -64,9 +63,12 @@ signIn(userEmail, userPassword) {
 	
 }
 addArticle(articleKeyword, articleTitle, articleText, articleDate, articleSource,articleLink, articleImage) {
-	return fetch(serverUrl + `articles`, {
+	return fetch(this.options + `/articles`, {
 		method:'POST', 
-		headers:this.options.headers,
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${this.token}`
+		},
 		body:JSON.stringify({ 
 			keyword: articleKeyword,
 			title: articleTitle,
@@ -79,7 +81,7 @@ addArticle(articleKeyword, articleTitle, articleText, articleDate, articleSource
 })
 	.then((res) => {
 		if (res.ok) {
-			res.json()
+			return res.json()
 		}
 		else {
 			return Promise.reject(`Ошибка: ${res.status}`)
@@ -89,7 +91,7 @@ addArticle(articleKeyword, articleTitle, articleText, articleDate, articleSource
 }
 
 removeArticle(id) {
-	return fetch(this.options.serverUrl + `articles`+id, {
+	return fetch(this.options + `/articles/`+id, {
 		method:'DELETE',
 		headers: {
 			'Content-Type': 'application/json',
@@ -115,14 +117,14 @@ search(name) {
 		method:'GET'})
 		.then(res =>{
 			if(res.ok) {
-				console.log(res);
-				return res.json();
+
+				return res.json()
 			}
 			return Promise.reject(`Ошибка: ${res.status}`)
 		})
 	}
 authorization() {
-	return fetch(this.options.serverUrl + `/users/me`, {
+	return fetch(this.options + `/users/me`, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',

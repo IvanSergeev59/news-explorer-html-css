@@ -1,10 +1,14 @@
- import {api} from "../modules/apiUrl.js";
+ import {api} from "../js/apiUrl.js";
  export class Article {
  	constructor(date, title, text, source, urlToImage) {
- 		this.articleElement = this.createArticle (date, title, text, source, urlToImage);
- 		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleClick);
- 	}
- 
+		this.date=date;
+		 this.articleElement = this.createArticle (date, title, text, source, urlToImage);
+		 console.log(date)
+		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleConsole);
+		this.articleElement.querySelector('.card-block-image').addEventListener('mouseover', this.imageWinPopup);
+		this.articleElement.querySelector('.card-block-image').addEventListener('mouseout', this.imageWinPopupClose);
+}
+	 
 
 createArticle(dateValue, titleValue, textValue, sourceValue, urlToImage,imageUni) {
 	const article = document.createElement('div');
@@ -28,10 +32,12 @@ createArticle(dateValue, titleValue, textValue, sourceValue, urlToImage,imageUni
 
 	articleKeyBlock.appendChild(articleCardBlockImage);
 	articleCardBlockImage.classList.add('card-block-image');
+	articleCardBlockImage.setAttribute('disabled', true)
 
 	articleTopBlock.appendChild(keyTextHidden);
 	keyTextHidden.classList.add('card__key-block');
 	keyTextHidden.classList.add('key-text-hidden');
+	keyTextHidden.classList.add('inactive');
 	keyTextHidden.appendChild(cardKeyText);
 	cardKeyText.classList.add('card__key-text');
 	
@@ -51,11 +57,77 @@ createArticle(dateValue, titleValue, textValue, sourceValue, urlToImage,imageUni
 	articleCardSource.classList.add('card__source')
 	articleCardSource.textContent = sourceValue;
 	return article;
-	console.log(article);
+	
+}
+imageWinPopup() {
+	const po = event.target.closest('.card');
+	const pol = po.querySelector('.key-text-hidden');
+
+
+	pol.classList.remove('inactive');
+	
+	
+}
+
+imageWinPopupClose() {
+	const po = event.target.closest('.card');
+	const pol = po.querySelector('.key-text-hidden');
+	pol.classList.add('inactive');
+	
+}
+articleConsole() {
+	
+	if(event.target.hasAttribute('saved')){
+
+const parent = event.target.closest('.card');
+const child = document.querySelector('#savingCards')
+
+function par(parent,child) {
+	parent.removeChild(child)
+}
+api.removeArticle(po.getAttribute('id'))
+.then(() =>{
+par(parent,child)
+	
+})
+	
+	.catch((err) =>{ 
+		console.log(err);
+	});
+}
+	if(event.target.hasAttribute('auth')) {
+		const card = event.target.closest('.card');
+		const mark = card.querySelector('.card-block-image')
+		const keyword = document.querySelector('.search__form_text-default').value;
+		const title = card.querySelector('.card__title').textContent;
+		const text = card.querySelector('.card__text').textContent;
+		const date = card.querySelector('.card__date').textContent;
+		const source = card.querySelector('.card__source').textContent;
+		const linkCard = card.querySelector('.card__top-block');
+		const linkBackground = linkCard.style.backgroundImage;
+		const link = linkBackground.substr(5,linkBackground.length - 7);
+		const image = link;
+		
+		api.addArticle(keyword,title,text, date, source, link, image)
+		.then(()=> {
+			
+				mark.classList.remove('block-image__non-marked');
+				mark.classList.add('block-image__marked');
+				mark.removeAttribute('auth');
+				
+			})
+			.catch((err) =>{ 
+				console.log(err);
+			});
+		
+	
+	}
+	event.stopPropagation();
 }
 
 remove() {
 	const articleChild = event.target.closest('.card');
+	console.log('2')
 	function removeChild (parent, child) {
 		parent.removeChild(child);
 	}
@@ -63,6 +135,7 @@ api.removeArticle(articleChild.getAttribute('id'))
 .then(() => {
 	removeChild(articleList, articleChild)
 })
+
 .catch((err) =>{ 
 	console.log(err);
 });

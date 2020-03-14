@@ -1,7 +1,7 @@
-import {buttonRegisterLoading} from "../modules/buttonLoading.js";
-import {api} from "../modules/apiUrl.js";
-import {popupAuthWin, registerSucess} from "../modules/Const.js";
-import {registerSuccessToLogin} from "../modules/registerSuccessToLogin.js";
+import {buttonRegisterLoading} from "../js/buttonLoading";
+import {api} from "../js/apiUrl";
+import {popupAuthWin, registerSucess} from "../js/consts/const.js";
+import {registerSuccessToLogin} from "../js/registerSuccessToLogin";
 export function registerFormSend(event) {
 	event.preventDefault();
 	const form = document.forms.regEmail;
