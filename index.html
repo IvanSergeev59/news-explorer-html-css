@@ -6,7 +6,7 @@
 	<meta name="author" content="Ivan Sergeev"> 
 	<meta name="description" content="news-explorer">
 	<title>news-explorer</title>
-	<link rel="stylesheet" href="style.d98fa6b92a699b850083.css">
+	<link rel="stylesheet" href="style.c87d2d99083c9e0122e1.css">
 	<link rel="shortcut icon" href="images/images/89c5b2523d4b2446bcf12515590a279b.ico" type="image/x-icon">
  </head>
 	<body class="body">
@@ -28,7 +28,7 @@
 						 <img class="authorization-name_image" src="images/images/fc94b57634caf2637dfdb4a9d378623b.png" alt="auth-image"> 
 						</div>
 					</div>
-				   <div class="header__non-authorization inactive">
+				   <div class="header__non-authorization">
 						<div class="header__page header__page_margin">
 							<p class="header__page_title">Главная</p>
 							<div class="header__page_underline"></div>
@@ -45,7 +45,7 @@
 						<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
 						<form class="search__form" name="search">
 							<input type="text"  minlength="2" class="search__form_text-default" placeholder="Введите тему новости" name="searchName">
-							<button class="search__button">
+							<button class="search__button" disabled="true">
 								Искать
 							</button>
 							<p class="login-form__error" id="searchError"></p>
@@ -59,11 +59,11 @@
  					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
  				</div>
  				<div class="cards__found">
- 					<h2 class="cards__found_title">Результаты поиска</h2>
+ 					<h2 class="cards__found_title inactive">Результаты поиска</h2>
  					<div class="cards__block">
 	 					
 	 				</div>
-	 				<button class="cards__found_more">
+	 				<button class="cards__found_more inactive">
 	 					Показать ещё
 	 				</button>	
  				</div>
@@ -89,13 +89,13 @@
 								<div class="login-form__header_underline"></div>
 						</div>
 						<p class="login-form__error" id="loginPassError"></p>
-						<button class="login-form__button" id="loginButton">
+						<button class="login-form__button" id="loginButton" disabled="true">
 							Войти
 						</button>
 						<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
 						<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="login-form close" id="close2">
 					</form>
-					<form class="login-form-register inactive" name="regEmail">
+					<form class="login-form-register inactive" name="regEmail" id="regEmailForm">
 					   <h2 class="login-form__title">Регистрация</h2>
 					   <div class="login-form__header" >
 						   <h3 class="login-form__header_subtitle">Email</h3>
@@ -115,20 +115,21 @@
 							   <div class="login-form__header_underline"></div>
 					   </div>
 					   <p class="login-form__error form-error__margin-register" id="regNameError"></p>
-					   <button class="login-form__button" id="registerButton">
+					   <button class="login-form__button" id="registerButton" disabled="true">
 						   Зарегистрироваться
 					   </button>
 					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
 						<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="close1" >
 					</form>
-					<form class="login-form-register inactive" name="registerSuccess">
+					<form class="login-form-register inactive" name="registerSuccess"
+					id="registerSuccess">
 						<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
-						 <div class="login-form__button" id="enterButton">
+						 <div class="login-form__button-success" id="enterButton">
 						   Выполнить вход
 					   </div>
 					   <img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="closeRegisterSuccess">
 					</form>
-					<div class="form__under inactive"></div>
+					<div class="login-form__close-space inactive"></div>
   				</div>
 					<footer class="footer">
 						<ul class="footer">
@@ -141,7 +142,7 @@
 						</ul>
 				</footer>
 			</div>
-			<script src="main.6ad303ccc6da4373594d.js"></script>
+			<script src="main.7c6519a7801416f35aec.js"></script>
 		</body>
 		</html>
 
