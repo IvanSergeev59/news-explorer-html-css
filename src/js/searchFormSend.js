@@ -26,10 +26,13 @@ export function searchFormSend(event) {
 		}
 	console.log(dat.articles.length);
 		let articlesLength = 3;
+		if(dat.articles.length>0){
 		for (let i=0; i < articlesLength; i++) {
 			
 			articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
 		}
+	}
+		else {}
 		cardsFoundMore.addEventListener('click', cardsMore);
 		function cardsMore() {
 			for (let o = 0; o<3; o++){
