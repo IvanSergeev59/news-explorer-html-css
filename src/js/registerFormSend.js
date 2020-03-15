@@ -5,13 +5,13 @@ import {registerSuccessToLogin} from "../js/registerSuccessToLogin";
 export function registerFormSend(event) {
 	event.preventDefault();
 	const form = document.forms.regEmail;
-	const regEmail = form.elements.regMail;
-	const regPas = form.elements.regPas;
-	const regName = form.elements.regNam;
-	const email = regEmail.value;
-	const pas = regPas.value;
-	const name = regName.value;
-	api.signUp(email, pas, name)
+	const registerEmail = form.elements.regMail;
+	const registePas = form.elements.regPas;
+	const registerName = form.elements.regNam;
+	const email = registerEmail.value;
+	const password = registePas.value;
+	const name = registerName.value;
+	api.signUp(email, password, name)
 	.then(() => {
 		registerButton.setAttribute('disabled', true);
         registerButton.classList.remove('button-active');

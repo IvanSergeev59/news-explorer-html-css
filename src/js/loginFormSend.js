@@ -7,10 +7,10 @@ export function loginFormSend(event) {
 	event.preventDefault();
 	const form = document.forms.loginEmail;
 	const loginEmail = form.elements.loginMail;
-	const loginPas = form.elements.loginPas;
+	const loginPassword = form.elements.loginPas;
 	const email = loginEmail.value;
-	const pas = loginPas.value;
-	api.signIn(email, pas)
+	const password = loginPassword.value;
+	api.signIn(email, password)
 	.then(() => {
 		loginButton.setAttribute('disabled', true);
         loginButton.classList.remove('button-active');

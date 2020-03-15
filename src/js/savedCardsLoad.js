@@ -37,7 +37,7 @@ const uniqueKeywords = unique(keywordsList) ;
 
 const uniqueKeywordsSum = uniqueKeywords.length-2 ;
 	
-for (var len = keywordsList.length, i = len; --i >= 0;) {
+for (let len = keywordsList.length, i = len; --i >= 0;) {
 	if (keywordsList[keywordsList[i]]) {
 		keywordsList[keywordsList[i]] += 1;
 		keywordsList.splice(i, 1);

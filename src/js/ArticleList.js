@@ -9,21 +9,21 @@ export class ArticleList {
 	addArticle(date, title, text, source, urlToImage, id) {
 		
 		const {articleElement} = new Article(date, title, text, source, urlToImage);
-		const imda = articleElement.querySelector('.card-block-image')
-		const imdao = articleElement.querySelector('.card__key-text');
+		const cardBlockImage = articleElement.querySelector('.card-block-image')
+		const cardKeyText = articleElement.querySelector('.card__key-text');
 		this.articles.push(articleElement);
 		
 		this.articleContainer.appendChild(articleElement);
 		if(check.classList.contains('inactive')) {
 			articleElement.setAttribute('auth', false);
-			imda.classList.add('block-image__non-auth');
-			imdao.textContent="Войдите, чтобы сохранять статьи"
+			cardBlockImage.classList.add('block-image__non-auth');
+			cardKeyText.textContent="Войдите, чтобы сохранять статьи"
 		}
 		else {
 			articleElement.setAttribute('auth', true);
-			imda.classList.add('block-image__non-marked');
-			imda.setAttribute('auth', true)
-			imdao.textContent="Нажмите, чтобы сохранить"
+			cardBlockImage.classList.add('block-image__non-marked');
+			cardBlockImage.setAttribute('auth', true)
+			cardKeyText.textContent="Нажмите, чтобы сохранить"
 		}
 	
 		
@@ -35,8 +35,8 @@ export class ArticleList {
 		this.articles.push(articleElement);
 		this.articleContainer.appendChild(articleElement);
 		articleElement.setAttribute('id', id);
-		const imda = articleElement.querySelector('.card-block-image')
-		const imdao = articleElement.querySelector('.card__key-text');
+		const cardBlockImage = articleElement.querySelector('.card-block-image')
+		const cardKeyText = articleElement.querySelector('.card__key-text');
 	
 		if(check.classList.contains('inactive')) {
 			articleElement.setAttribute('saved', false);
@@ -48,9 +48,9 @@ export class ArticleList {
 		}
 		if (articleElement.hasAttribute('saved')) {
 			
-			imda.classList.add('block-image__delete');
-			imda.setAttribute('saved', true)
-			imdao.textContent="Нажмите, чтобы удалить"
+			cardBlockImage.classList.add('block-image__delete');
+			cardBlockImage.setAttribute('saved', true)
+			cardKeyText.textContent="Нажмите, чтобы удалить"
 		}
 
 	

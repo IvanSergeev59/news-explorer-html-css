@@ -8,8 +8,8 @@ const articleList = new ArticleList(document.querySelector('.cards__block'));
 export function searchFormSend(event) {
 	event.preventDefault();
 	const form = document.forms.search;
-	const searchNam = form.elements.searchName;
-	const name = searchNam.value;
+	const searchName = form.elements.searchName;
+	const name = searchName.value;
 	
 	const cardsBlock = document.querySelector('.cards__block');
 	while (cardsBlock.firstChild) {
@@ -25,19 +25,19 @@ export function searchFormSend(event) {
 			cardsFoundMore.classList.remove('inactive');
 		}
 	console.log(dat.articles.length);
-		let aL = 3;
-		for (let i=0; i < aL; i++) {
+		let articlesLength = 3;
+		for (let i=0; i < articlesLength; i++) {
 			
 			articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
 		}
 		cardsFoundMore.addEventListener('click', cardsMore);
 		function cardsMore() {
 			for (let o = 0; o<3; o++){
-				if(aL<dat.articles.length){
-			aL = aL +1;
+				if(articlesLength<dat.articles.length){
+					articlesLength = articlesLength +1;
 				}
 				else {
-					aL = aL+0;
+					articlesLength = articlesLength+0;
 					cardsFoundMore.classList.add('inactive');
 				}
 			
@@ -47,7 +47,7 @@ export function searchFormSend(event) {
 				cardsBlock.removeChild(cardsBlock.firstChild);
 			};
 			
-			for (let i=0; i < aL; i++) {
+			for (let i=0; i < articlesLength; i++) {
 			
 				articleList. addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
 			}

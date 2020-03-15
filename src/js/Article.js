@@ -60,19 +60,19 @@ createArticle(dateValue, titleValue, textValue, sourceValue, urlToImage,imageUni
 	
 }
 imageWinPopup() {
-	const po = event.target.closest('.card');
-	const pol = po.querySelector('.key-text-hidden');
+	const card = event.target.closest('.card');
+	const keyTextHidden = card.querySelector('.key-text-hidden');
 
 
-	pol.classList.remove('inactive');
+	keyTextHidden.classList.remove('inactive');
 	
 	
 }
 
 imageWinPopupClose() {
-	const po = event.target.closest('.card');
-	const pol = po.querySelector('.key-text-hidden');
-	pol.classList.add('inactive');
+	const card = event.target.closest('.card');
+	const keyTextHidden = card.querySelector('.key-text-hidden');
+	keyTextHidden.classList.add('inactive');
 	
 }
 articleConsole() {
