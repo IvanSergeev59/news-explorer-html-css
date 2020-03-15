@@ -2,8 +2,8 @@ import {buttonSearchLoading, buttonSearchLoadingEnd} from "../js/buttonLoading.j
 import {ArticleList} from "../js/ArticleList";
 import {api} from "../js/apiUrl.js";
 
-import {noCards, cardsFound} from "../js/consts/const.js"
-
+import {noCards, cardsFound, cardsFoundTitle} from "../js/consts/const.js"
+const cardsFoundMore = document.querySelector('.cards__found_more')
 const articleList = new ArticleList(document.querySelector('.cards__block'));
 export function searchFormSend(event) {
 	event.preventDefault();
@@ -20,15 +20,28 @@ export function searchFormSend(event) {
 	
 	api.search(name)
 	.then((dat) => {
+		if (dat.articles.length>0) {
+			cardsFoundTitle.classList.remove('inactive');
+			cardsFoundMore.classList.remove('inactive');
+		}
 	console.log(dat.articles.length);
 		let aL = 3;
 		for (let i=0; i < aL; i++) {
 			
-			articleList. addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+			articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
 		}
-		const cardsFoundMore = document.querySelector('.cards__found_more').addEventListener('click', cardsMore);
+		cardsFoundMore.addEventListener('click', cardsMore);
 		function cardsMore() {
-			aL = aL +3;
+			for (let o = 0; o<3; o++){
+				if(aL<dat.articles.length){
+			aL = aL +1;
+				}
+				else {
+					aL = aL+0;
+					cardsFoundMore.classList.add('inactive');
+				}
+			
+			}
 			const cardsBlock = document.querySelector('.cards__block');
 			while (cardsBlock.firstChild) {
 				cardsBlock.removeChild(cardsBlock.firstChild);

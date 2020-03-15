@@ -6,7 +6,9 @@ const popupAuthClose = document.querySelector('#close2');
 const popupRegi = document.querySelector('.login-form__signup-enter');
 const popupRegClose = document.querySelector('#close1');
 const popupRegiWin = document.querySelector('.login-form-register');
-const popupRegiEnter = document.querySelector('#login-form__signup-enter')
+const popupRegiEnter = document.querySelector('#login-form__signup-enter');
+const cardsFoundTitle = document.querySelector('.cards__found_title');
+const cardsFoundMore = document.querySelector('.cards__found_more');
 const loginEmailForm = document.forms.loginEmail;
 const registerEmailForm = document.forms.regEmail;
 const searchForm = document.forms.search;
@@ -29,6 +31,6 @@ const registerSuccess = document.querySelector('#registerSuccess');
 const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
 const form__under = document.querySelector('.form__under');
-export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
-    popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, loginButton, 
+export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+    popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
     registerButton, loginEmailError,loginPassError, regNameError, regPasError, regEmailError}

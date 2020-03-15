@@ -1,2 +1,2 @@
- export const serverUrl = 'http://api.praka59.site';
- export const token = localStorage.getItem('token');
+ export const serverUrl = 'http://localhost:3000';
+ export const token = localStorage.getItem('tokn');
