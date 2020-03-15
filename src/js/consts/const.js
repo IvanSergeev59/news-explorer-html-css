@@ -31,7 +31,7 @@ const noCards = document.querySelector('.cards__no-cards');
 const registerSuccess = document.querySelector('#registerSuccess');
 const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
-const form__under = document.querySelector('.form__under');
-export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, headerAuthorizatioNameBlock, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+const loginFormCloseSpace = document.querySelector('.login-form__close-space');
+export {popupAuth, enterButton, loginFormCloseSpace, cardsFound, headerAuth, savePage, headerAuthorizatioNameBlock, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
     popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
     registerButton, loginEmailError,loginPassError, regNameError, regPasError, regEmailError}

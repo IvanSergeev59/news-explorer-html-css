@@ -1,5 +1,5 @@
 import "./style.css";
-import {popupAuth, headerAuthorizatioNameBlock,  popupAuthClose, popupRegi, form__under, searchForm, popupRegClose, loginEmailForm, popupRegiEnter, loginPassForm, registerEmailForm, registerNameForm, registerPassForm, loginEmailError,loginButton} from "./js/consts/const.js";
+import {popupAuth, headerAuthorizatioNameBlock,  popupAuthClose, popupRegi, loginFormCloseSpace, searchForm, popupRegClose, loginEmailForm, popupRegiEnter, loginPassForm, registerEmailForm, registerNameForm, registerPassForm, loginEmailError,loginButton} from "./js/consts/const.js";
 import {PopupName} from "./js/AuthorizationWin";
 import {PopupReg} from "./js/RegistrationWin";
 import {validationLoginEmail, validationRegister, validationSearch} from "./js/Validation";
@@ -11,8 +11,8 @@ import {searchFormSend} from "./js/searchFormSend";
 import { checkAuthorization } from "./js/checkAuthorization";
 import { getUserName } from "./js/getUserName";
 import {loginExit} from './js/loginExit';
-const popupname = new PopupName(popupAuth, popupAuthClose, form__under);
-const popupreg = new PopupReg(popupRegi, popupRegClose, popupRegiEnter, form__under);
+const popupname = new PopupName(popupAuth, popupAuthClose, loginFormCloseSpace);
+const popupreg = new PopupReg(popupRegi, popupRegClose, popupRegiEnter, loginFormCloseSpace);
 const token = localStorage.getItem('token');
 
 checkAuthorization();

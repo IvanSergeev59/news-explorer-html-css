@@ -8,7 +8,7 @@
 @import url('__signup/login-form__signup-enter.css');
 @import url('__error/login-form__error.css');
 @import url('__subtitle/login-form__subtitle.css');
-@import url('form__under.css');
+@import url('__close-space/login-form__close-space.css');
 @import url('link.css');
 @import url('form-error.css');
 .login-form {
