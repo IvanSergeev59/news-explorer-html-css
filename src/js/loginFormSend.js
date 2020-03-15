@@ -15,6 +15,7 @@ export function loginFormSend(event) {
 		loginButton.setAttribute('disabled', true);
         loginButton.classList.remove('button-active');
 		popupAuthWin.classList.add("inactive"), 10000;
+		form.reset();  
 		window.location.reload();
 	})
 	.catch((err) => {
@@ -24,5 +25,5 @@ export function loginFormSend(event) {
 	buttonLoginLoading();
 		
 	
-		form.reset();    
+	 
 	}
