@@ -25,12 +25,13 @@ const headerUserName = document.querySelector('.header__authorization-name')
 const cardsFound = document.querySelector('.cards__found')
 const headerAuth = document.querySelector('.header__authorization');
 const headerNonAuth = document.querySelector('.header__non-authorization');
+const headerAuthorizatioNameBlock = document.querySelector('.header__authorization-name-block')
 const card = document.querySelector('.card');
 const noCards = document.querySelector('.cards__no-cards');
 const registerSuccess = document.querySelector('#registerSuccess');
 const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
 const form__under = document.querySelector('.form__under');
-export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, headerAuthorizatioNameBlock, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
     popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
     registerButton, loginEmailError,loginPassError, regNameError, regPasError, regEmailError}

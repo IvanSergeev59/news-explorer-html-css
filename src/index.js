@@ -1,5 +1,5 @@
 import "./style.css";
-import {popupAuth,  popupAuthClose, popupRegi, form__under, searchForm, popupRegClose, loginEmailForm, popupRegiEnter, loginPassForm, registerEmailForm, registerNameForm, registerPassForm, loginEmailError,loginButton} from "./js/consts/const.js";
+import {popupAuth, headerAuthorizatioNameBlock,  popupAuthClose, popupRegi, form__under, searchForm, popupRegClose, loginEmailForm, popupRegiEnter, loginPassForm, registerEmailForm, registerNameForm, registerPassForm, loginEmailError,loginButton} from "./js/consts/const.js";
 import {PopupName} from "./js/AuthorizationWin";
 import {PopupReg} from "./js/RegistrationWin";
 import {validationLoginEmail, validationRegister, validationSearch} from "./js/Validation";
@@ -10,7 +10,7 @@ import {registerFormSend} from "./js/registerFormSend";
 import {searchFormSend} from "./js/searchFormSend";
 import { checkAuthorization } from "./js/checkAuthorization";
 import { getUserName } from "./js/getUserName";
-
+import {loginExit} from './js/loginExit';
 const popupname = new PopupName(popupAuth, popupAuthClose, form__under);
 const popupreg = new PopupReg(popupRegi, popupRegClose, popupRegiEnter, form__under);
 const token = localStorage.getItem('token');
@@ -18,7 +18,7 @@ const token = localStorage.getItem('token');
 checkAuthorization();
 getUserName();
 
-
+headerAuthorizatioNameBlock.addEventListener('click', loginExit)
 loginEmailForm.addEventListener('input', validationLoginEmail);
 registerEmailForm.addEventListener('input', validationRegister);
 searchForm.addEventListener('input', validationSearch);
