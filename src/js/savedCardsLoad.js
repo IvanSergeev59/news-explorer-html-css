@@ -23,7 +23,7 @@ export function savedCardsLoad() {
 		})
 		console.log(keywordsList);
 		function unique(keywordsList) {
-			let result = [];
+			const result = [];
 
   for (let str of keywordsList) {
     if (!result.includes(str)) {
