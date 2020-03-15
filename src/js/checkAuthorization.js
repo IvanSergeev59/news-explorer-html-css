@@ -6,22 +6,17 @@ export function checkAuthorization(){
    api.authorization()
 
 
-.then((res) => {
-	if (res.ok) {
-		
-		headerAuth.classList.remove('inactive');
-		return res.json();
-		
-		
-		
-	}
-	
-	else {
-		headerNonAuth.classList.remove('inactive');
-		return Promise.reject(`Ошибка: ${res.status}`);
+.then((dat) => {
 
-	}
+		headerAuth.classList.remove('inactive');
+		headerNonAuth.classList.add('inactive')
+		
+		
+		
+	})
 	
-})
+	.catch((err) =>{
+		console.log(err);
+	})
 
 }
