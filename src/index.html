@@ -95,7 +95,7 @@
 						<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
 						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close" id="close2">
 					</form>
-					<form class="login-form-register inactive" name="regEmail">
+					<form class="login-form-register inactive" name="regEmail" id="regEmailForm">
 					   <h2 class="login-form__title">Регистрация</h2>
 					   <div class="login-form__header" >
 						   <h3 class="login-form__header_subtitle">Email</h3>
@@ -121,9 +121,10 @@
 					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
 						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="close1" >
 					</form>
-					<form class="login-form-register inactive" name="registerSuccess">
+					<form class="login-form-register inactive" name="registerSuccess"
+					id="registerSuccess">
 						<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
-						 <div class="login-form__button" id="enterButton">
+						 <div class="login-form__button-success" id="enterButton">
 						   Выполнить вход
 					   </div>
 					   <img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="closeRegisterSuccess">

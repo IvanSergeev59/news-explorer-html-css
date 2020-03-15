@@ -1,6 +1,6 @@
 import {buttonRegisterLoading} from "../js/buttonLoading";
 import {api} from "../js/apiUrl";
-import {popupAuthWin, registerSucess} from "../js/consts/const.js";
+import {popupRegiWin, registerSuccess, regEmailError} from "../js/consts/const.js";
 import {registerSuccessToLogin} from "../js/registerSuccessToLogin";
 export function registerFormSend(event) {
 	event.preventDefault();
@@ -15,12 +15,14 @@ export function registerFormSend(event) {
 	.then(() => {
 		registerButton.setAttribute('disabled', true);
         registerButton.classList.remove('button-active');
-          popupAuthWin.classList.add("inactive");
-          registerSuccess.classList.remove('inactive');
-          registerSuccessToLogin.addEventListener('click', registerSuccessToLogin)
+		popupRegiWin.classList.add("inactive");
+		  registerSuccess.classList.remove('inactive');
+		  form.reset();  
+          registerSuccessToLogin()
 	})
 	.catch((err) => {
 		console.log(err);
+		regEmailError.textContent = 'Такой пользователь уже существует';
 	})
 
 	buttonRegisterLoading();

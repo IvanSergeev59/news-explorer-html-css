@@ -25,9 +25,10 @@ const headerAuth = document.querySelector('.header__authorization');
 const headerNonAuth = document.querySelector('.header__non-authorization');
 const card = document.querySelector('.card');
 const noCards = document.querySelector('.cards__no-cards');
-const registerSuccess = document.querySelector('#registerSucess');
+const registerSuccess = document.querySelector('#registerSuccess');
+const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
 const form__under = document.querySelector('.form__under');
-export {popupAuth, form__under, cardsFound, headerAuth, savePage, headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+export {popupAuth, enterButton, form__under, cardsFound, headerAuth, savePage, headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
     popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, loginButton, 
     registerButton, loginEmailError,loginPassError, regNameError, regPasError, regEmailError}

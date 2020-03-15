@@ -14,7 +14,7 @@ a {
   position: relative;
   width: 100%;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
  }
 .page {
   display: flex;
@@ -45,13 +45,13 @@ a {
   position: relative;
   width: 100%;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
  }
    .page {
   display: flex;
   position: relative;
   width: 100%;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
  };
  };
