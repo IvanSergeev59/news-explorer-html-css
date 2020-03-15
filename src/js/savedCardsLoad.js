@@ -52,9 +52,14 @@ for (let len = keywordsList.length, i = len; --i >= 0;) {
 	 return keywordsList[b] - keywordsList[a];
 	 
   })
-console.log(keywordsList)
+  if(dat.data.length>1){
+
 		pageTitle.textContent =  headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
 		pageSubtitle.textContent = 'По ключевым словам:'+ ' '+ keywordsList[0] +' ' + keywordsList[1] + ' и ' + uniqueKeywordsSum + ' другим'
+  }
+  else {
+	pageTitle.textContent =  headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
+  }
 	})
 		
 	.catch((err) =>{
