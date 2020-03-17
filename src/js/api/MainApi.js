@@ -1,7 +1,5 @@
-import {serverUrl} from "../js/apiUrl.js"; 
 
-import {headerAuth, headerUserName,  headerNonAuth}  from "../js/consts/const.js";
-export class Api {
+export class MainApi {
 	constructor(options,token) {
 	this.options = options;
 	this.token = token;
@@ -107,29 +105,7 @@ removeArticle(id) {
 		}
 	})
 }
-search(name) {
-	const apiKey='ec6527c5735a46ef9160f129e37285aa';
-	const data = new Date()
-	const month = data.getMonth()+1;
-	const date = data.getDate();
-	const year = data.getFullYear()
-	const pastWeekDay = date - 7;
-	const from = year+'-'+month+'-'+date;
 
-	const to = year+'-'+month+'-'+pastWeekDay;
-	console.log(from, to)
-	const pageSize = '100';
-	const url = `http://newsapi.org/v2/everything?q=${name}&from=${from}&to=${to}&pageSize=${pageSize}&apiKey=${apiKey}`;
-	return fetch(url, {
-		method:'GET'})
-		.then(res =>{
-			if(res.ok) {
-
-				return res.json()
-			}
-			return Promise.reject(`Ошибка: ${res.status}`)
-		})
-	}
 authorization() {
 	return fetch(this.options + `/users/me`, {
 		method: 'GET',

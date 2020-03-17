@@ -15,10 +15,10 @@ const searchForm = document.forms.search;
 const loginButton = document.querySelector('#loginButton');
 const registerButton = document.querySelector('#registerButton');
 const loginEmailError = document.querySelector('#loginEmailError');
-const loginPassError = document.querySelector('#loginPassError');
-const regNameError= document.querySelector('#regNameError');
-const regEmailError= document.querySelector('#regEmailError');
-const regPasError= document.querySelector('#regPasError');
+const loginPasswordError = document.querySelector('#loginPassError');
+const registerNameError= document.querySelector('#regNameError');
+const registerEmailError= document.querySelector('#regEmailError');
+const registerPasError= document.querySelector('#regPasError');
 const searchError = document.querySelector('#searchError');
 const searchButton = document.querySelector('.search__button');
 const headerUserName = document.querySelector('.header__authorization-name')
@@ -32,6 +32,10 @@ const registerSuccess = document.querySelector('#registerSuccess');
 const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
 const loginFormCloseSpace = document.querySelector('.login-form__close-space');
-export {popupAuth, enterButton, loginFormCloseSpace, cardsFound, headerAuth, savePage, headerAuthorizatioNameBlock, cardsFoundTitle,  headerTitle, popupRegiEnter, headerNonAuth, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
-    popupAuthWin, popupAuthClose, popupRegi, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
-    registerButton, loginEmailError,loginPassError, regNameError, regPasError, regEmailError}
+const mobileMenu = document.querySelector('.header__mobile-menu');
+const mobileMenuBack = document.querySelector('.header__mobile-back');
+export const constsList = {mobileMenuBack,mobileMenu,headerAuthorizatioNameBlock, headerAuth, headerNonAuth };
+ 
+export {popupAuth,enterButton, loginFormCloseSpace, registerEmailError, loginPasswordError, registerNameError,  cardsFound, savePage, cardsFoundTitle,  headerTitle, popupRegiEnter, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+    popupAuthWin, popupAuthClose, popupRegi, registerPasError, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
+    registerButton, loginEmailError}

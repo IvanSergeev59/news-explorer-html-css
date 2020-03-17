@@ -4,7 +4,7 @@
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 104px;
-	position: relative;
+	
 	color: white;
 }
 
@@ -14,19 +14,19 @@
 	flex-direction: row;
 	margin: 0 auto;
 	margin-right: 40px;
-	position: relative;
+	
 	color: white;
 }
 	}
 
 	@media (max-width: 768px) {
 		.header__non-authorization{
-			display: flex;
+			display: none;
 	position: fixed;
 
 
 		color: white;
-		position: relative;
+		
 	flex-direction: column;
 	width: 100%;
 	margin:0 auto;

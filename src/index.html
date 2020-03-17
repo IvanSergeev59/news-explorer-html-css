@@ -12,8 +12,8 @@
 	<body class="body">
 		<div class="page">
 			<header class="header header__border-white">
-				<img class="header__mobile-menu  inactive" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
-				<img class="header__mobile-back" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
+				<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
+				<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
 				<div class="header__title">NewsExplorer</div>
 				<div class="header__authorization header__white-back inactive">
 					<div class="header__page header__page_main-margin">
@@ -79,13 +79,13 @@
 						<h2 class="login-form__title">Вход</h2>
 						<div class="login-form__header" >
 							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginMail">
+							<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginEmailInput">
 							<div class="login-form__header_underline"></div>
 						</div>
 						<p class="login-form__error" id="loginEmailError"></p>
 						<div class="login-form__header">
 								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPas">
+								<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPasswordInput">
 								<div class="login-form__header_underline"></div>
 						</div>
 						<p class="login-form__error" id="loginPassError"></p>
@@ -99,19 +99,19 @@
 					   <h2 class="login-form__title">Регистрация</h2>
 					   <div class="login-form__header" >
 						   <h3 class="login-form__header_subtitle">Email</h3>
-						   <input class="login__form_text" minlength="2" placeholder="Введите почту" name="regMail">
+						   <input class="login__form_text" minlength="2" placeholder="Введите почту" name="regEmailInput">
 						   <div class="login-form__header_underline"></div>
 					   </div>
 					   <p class="login-form__error form-error__margin-email" id="regEmailError"></p>
 					   <div class="login-form__header" name="regPass">
 							   <h3 class="login-form__header_subtitle">Пароль</h3>
-							   <input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPas">
+							   <input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPasInput">
 							   <div class="login-form__header_underline"></div>
 					   </div>
 					   <p class="login-form__error form-error__margin-email" id="regPasError"></p>
 					   <div class="login-form__header" name="regName">
 							   <h3 class="login-form__header_subtitle">Имя</h3>
-							   <input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNam">
+							   <input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNameInput">
 							   <div class="login-form__header_underline"></div>
 					   </div>
 					   <p class="login-form__error form-error__margin-register" id="regNameError"></p>

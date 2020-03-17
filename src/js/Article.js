@@ -1,10 +1,10 @@
- import {api} from "../js/apiUrl.js";
+ import {mainApi} from "../js/apiUrl/mainApiUrl.js";
  export class Article {
  	constructor(date, title, text, source, urlToImage) {
 		this.date=date;
 		 this.articleElement = this.createArticle (date, title, text, source, urlToImage);
 		 
-		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleConsole);
+		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleMark);
 		this.articleElement.querySelector('.card-block-image').addEventListener('mouseover', this.imageWinPopup);
 		this.articleElement.querySelector('.card-block-image').addEventListener('mouseout', this.imageWinPopupClose);
 }
@@ -75,7 +75,7 @@ imageWinPopupClose() {
 	keyTextHidden.classList.add('inactive');
 	
 }
-articleConsole() {
+articleMark() {
 	
 	
 	if(event.target.hasAttribute('saved')){
@@ -83,12 +83,12 @@ articleConsole() {
 const child = event.target.closest('.card');
 const parent = document.querySelector('#savingCards')
 
-function par(parent,child) {
+function childDel(parent,child) {
 	parent.removeChild(child)
 }
-api.removeArticle(child.getAttribute('id'))
+mainApi.removeArticle(child.getAttribute('id'))
 .then(() =>{
-par(parent,child)
+childDel(parent,child)
 	
 })
 	
@@ -109,7 +109,7 @@ par(parent,child)
 		const link = linkBackground.substr(5,linkBackground.length - 7);
 		const image = link;
 		
-		api.addArticle(keyword,title,text, date, source, link, image)
+		mainApi.addArticle(keyword,title,text, date, source, link, image)
 		.then(()=> {
 			
 				mark.classList.remove('block-image__non-marked');

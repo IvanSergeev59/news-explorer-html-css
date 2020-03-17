@@ -1,8 +1,8 @@
-import {buttonSearchLoading, buttonSearchLoadingEnd} from "../js/buttonLoading.js";
-import {ArticleList} from "../js/ArticleList";
-import {api} from "../js/apiUrl.js";
+import {buttonSearchLoading, buttonSearchLoadingEnd} from "../buttonLoading.js";
+import {ArticleList} from "../ArticleList";
+import {newsApi} from "../apiUrl/newsApiUrl.js";
 
-import {noCards, cardsFound, cardsFoundTitle} from "../js/consts/const.js"
+import {noCards, cardsFound, cardsFoundTitle} from "../consts/const.js"
 const cardsFoundMore = document.querySelector('.cards__found_more')
 const articleList = new ArticleList(document.querySelector('.cards__block'));
 export function searchFormSend(event) {
@@ -18,7 +18,7 @@ export function searchFormSend(event) {
 	
 
 	
-	api.search(name)
+	newsApi.search(name)
 	.then((dat) => {
 		if (dat.articles.length>0) {
 			cardsFoundTitle.classList.remove('inactive');

@@ -4,8 +4,8 @@ export function registerSuccessToLogin() {
 	
 
 	enterButton.addEventListener('click', openAuth);
-	loginFormCloseSpace.addEventListener('click', under)
-	  function under() {
+	loginFormCloseSpace.addEventListener('click', underFormSpace)
+	  function underFormSpace() {
 		loginFormCloseSpace.classList.add('inactive');
 		registerSuccess.classList.add('inactive');
 

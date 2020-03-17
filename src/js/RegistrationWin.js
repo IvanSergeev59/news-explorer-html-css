@@ -1,5 +1,5 @@
 import {popupAuthWin, popupRegiWin, loginFormCloseSpace} from "../js/consts/const.js";
-export class PopupReg {
+export class PopupRegWin {
     constructor(popupRegi, popupRegClose, popupRegiEnter, loginFormCloseSpace) {
         this.popupRegi = popupRegi;
         this.popupRegClose = popupRegClose;
@@ -8,7 +8,7 @@ export class PopupReg {
         this.popupRegi.addEventListener('click', this.open);
         this.popupRegClose.addEventListener('click', this.close);
         this.popupRegiEnter.addEventListener('click', this.enter);
-        this.loginFormCloseSpace.addEventListener('click', this.under)
+        this.loginFormCloseSpace.addEventListener('click', this.underFormSpace)
     }
     open() {
         popupRegiWin.classList.remove("inactive");
@@ -25,7 +25,7 @@ export class PopupReg {
        popupRegiWin.classList.add("inactive");
        popupAuthWin.classList.remove("inactive"); 
     }
-    under() {
+    underFormSpace() {
         popupRegiWin.classList.add("inactive");
         loginFormCloseSpace.classList.add('inactive')
     }

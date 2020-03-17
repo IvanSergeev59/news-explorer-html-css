@@ -1,12 +1,12 @@
-import {loginEmailForm, searchButton, searchForm, searchError, loginEmailError, loginButton, loginPassError
-  , regEmailError,regPasError, regNameError, registerEmailForm, registerButton} from "../js/consts/const.js";
+import {loginEmailForm, searchButton, searchForm, searchError, loginEmailError, loginButton, loginPasswordError
+  , registerEmailError,registerPasError, registerNameError, registerEmailForm, registerButton} from "../js/consts/const.js";
 
 export function validationLoginEmail(event) {
-    const name = loginEmailForm.elements.loginMail.value;
-    const pass = loginEmailForm.elements.loginPas;
+    const name = loginEmailForm.elements.loginEmailInput.value;
+    const password = loginEmailForm.elements.loginPasswordInput;
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     loginEmailError.textContent='';
-    loginPassError.textContent = '';
+    loginPasswordError.textContent = '';
  
         function validateText(field, errorElement) {
        
@@ -41,18 +41,18 @@ export function validationLoginEmail(event) {
             }
           }
 
-          validateText(pass, loginPassError);
+          validateText(password, loginPasswordError);
           validateEmail(name, loginEmailError, reg);
           
     }
 export function validationRegister(event){
-    const email = registerEmailForm.elements.regMail.value;
-    const pas = registerEmailForm.elements.regPas;
-    const name = registerEmailForm.elements.regNam;
+    const email = registerEmailForm.elements.regEmailInput.value;
+    const password = registerEmailForm.elements.regPasInput;
+    const name = registerEmailForm.elements.regNameInput;
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    regNameError.textContent='';
-    regPasError.textContent='';
-    regEmailError.textContent='';
+    registerNameError.textContent='';
+    registerPasError.textContent='';
+    registerEmailError.textContent='';
         function validateEmail (fieldEmail, errorEmail,reg) {
         if (reg.test(fieldEmail) == false) {
             errorEmail.textContent = 'Введите корретный email';
@@ -85,13 +85,13 @@ export function validationRegister(event){
             }
         
           }  
-    validateEmail(email, regEmailError,reg);
-    validateText(pas,regPasError);
-    validateText(name,regNameError);
+    validateEmail(email, registerEmailError,reg);
+    validateText(password,registerPasError);
+    validateText(name,registerNameError);
 }
 
 export function validationSearch(event) {
-  const word = searchForm.elements.searchName;
+  const keyword = searchForm.elements.searchName;
   searchError.textContent = '';
   function validateText(field, errorElement) {
        
@@ -114,6 +114,6 @@ export function validationSearch(event) {
             }
         
           }
-          console.log('se')
-          validateText(word, searchError);
+          
+          validateText(keyword, searchError);
 }

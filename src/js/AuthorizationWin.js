@@ -1,5 +1,5 @@
 import {popupAuthWin, loginFormCloseSpace} from "../js/consts/const.js";
-export class PopupName {
+export class PopupAuthWin {
     constructor(popupAuth, popupAuthClose, loginFormCloseSpace) {
 this.popupAuth = popupAuth;
 this.popupAuthClose= popupAuthClose;
