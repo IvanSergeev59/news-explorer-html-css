@@ -1,4 +1,4 @@
-import {popupAuthWin, popupRegiWin, loginFormCloseSpace} from "../js/consts/const.js";
+import {constsList} from "../js/consts/const.js";
 export class PopupRegWin {
     constructor(popupRegi, popupRegClose, popupRegiEnter, loginFormCloseSpace) {
         this.popupRegi = popupRegi;
@@ -11,22 +11,22 @@ export class PopupRegWin {
         this.loginFormCloseSpace.addEventListener('click', this.underFormSpace)
     }
     open() {
-        popupRegiWin.classList.remove("inactive");
-        popupAuthWin.classList.add("inactive");
-        loginFormCloseSpace.classList.remove('inactive')
-       
+        constsList.popupRegiWin.classList.remove("inactive");
+        constsList.popupAuthWin.classList.add("inactive");
+        constsList.loginFormCloseSpace.classList.remove('inactive')
+        
     }
     close() {
         
-        popupRegiWin.classList.add("inactive");
+        constsList.popupRegiWin.classList.add("inactive");
         
     }
     enter() {
-       popupRegiWin.classList.add("inactive");
-       popupAuthWin.classList.remove("inactive"); 
-    }
-    underFormSpace() {
-        popupRegiWin.classList.add("inactive");
-        loginFormCloseSpace.classList.add('inactive')
-    }
+     constsList.popupRegiWin.classList.add("inactive");
+     constsList.popupAuthWin.classList.remove("inactive"); 
+ }
+ underFormSpace() {
+    constsList.popupRegiWin.classList.add("inactive");
+    constsList.loginFormCloseSpace.classList.add('inactive')
+}
 }

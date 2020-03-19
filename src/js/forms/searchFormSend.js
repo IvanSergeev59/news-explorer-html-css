@@ -2,18 +2,18 @@ import {buttonSearchLoading, buttonSearchLoadingEnd} from "../buttonLoading.js";
 import {ArticleList} from "../ArticleList";
 import {newsApi} from "../apiUrl/newsApiUrl.js";
 
-import {noCards, cardsFound, cardsFoundTitle} from "../consts/const.js"
-const cardsFoundMore = document.querySelector('.cards__found_more')
+import {constsList} from "../consts/const.js"
+
 const articleList = new ArticleList(document.querySelector('.cards__block'));
 export function searchFormSend(event) {
 	event.preventDefault();
-	const form = document.forms.search;
+	const form = constsList.searchForm;
 	const searchName = form.elements.searchName;
 	const name = searchName.value;
 	
-	const cardsBlock = document.querySelector('.cards__block');
-	while (cardsBlock.firstChild) {
-		cardsBlock.removeChild(cardsBlock.firstChild);
+	
+	while (constsList.cardsBlock.firstChild) {
+		constsList.cardsBlock.removeChild(constsList.cardsBlock.firstChild);
 	};
 	
 
@@ -21,19 +21,19 @@ export function searchFormSend(event) {
 	newsApi.search(name)
 	.then((dat) => {
 		if (dat.articles.length>0) {
-			cardsFoundTitle.classList.remove('inactive');
-			cardsFoundMore.classList.remove('inactive');
+			constsList.cardsFoundTitle.classList.remove('inactive');
+			constsList.cardsFoundMore.classList.remove('inactive');
 		}
-	console.log(dat.articles.length);
+		console.log(dat.articles.length);
 		let articlesLength = 3;
 		if(dat.articles.length>0){
-		for (let i=0; i < articlesLength; i++) {
-			
-			articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+			for (let i=0; i < articlesLength; i++) {
+				
+				articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+			}
 		}
-	}
 		else {}
-		cardsFoundMore.addEventListener('click', cardsMore);
+			constsList.cardsFoundMore.addEventListener('click', cardsMore);
 		function cardsMore() {
 			for (let o = 0; o<3; o++){
 				if(articlesLength<dat.articles.length){
@@ -41,32 +41,32 @@ export function searchFormSend(event) {
 				}
 				else {
 					articlesLength = articlesLength+0;
-					cardsFoundMore.classList.add('inactive');
+					constsList.cardsFoundMore.classList.add('inactive');
 				}
-			
+				
 			}
-			const cardsBlock = document.querySelector('.cards__block');
-			while (cardsBlock.firstChild) {
-				cardsBlock.removeChild(cardsBlock.firstChild);
+			
+			while (constsList.cardsBlock.firstChild) {
+				constsList.cardsBlock.removeChild(constsList.cardsBlock.firstChild);
 			};
 			
 			for (let i=0; i < articlesLength; i++) {
-			
-				articleList. addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+				
+				articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
 			}
 		}
 
 		
 		if(dat.articles.length === 0) {
-			noCards.classList.remove('inactive');
-			cardsFound.classList.add('inactive')
+			constsList.noCards.classList.remove('inactive');
+			constsList.cardsFound.classList.add('inactive')
 		}
 		else {
-			noCards.classList.add('inactive');
-			cardsFound.classList.remove('inactive')
-	}
+			constsList.noCards.classList.add('inactive');
+			constsList.cardsFound.classList.remove('inactive')
+		}
 	})
-		
+	
 
 	.catch((err) =>{
 		console.log(err);

@@ -2,14 +2,14 @@ import { mainApi } from "../js/apiUrl/mainApiUrl";
 import {constsList} from "../js/consts/const.js";
 
 export function checkAuthorization(){ 
-   
-   mainApi.authorization()
+	
+	mainApi.authorization()
 
 
-.then((dat) => {
+	.then((dat) => {
 
-	constsList.headerAuth.classList.remove('inactive');
-	constsList.headerNonAuth.classList.add('inactive')
+		constsList.headerAuth.classList.remove('inactive');
+		constsList.headerNonAuth.classList.add('inactive')
 		
 		
 		

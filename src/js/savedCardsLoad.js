@@ -1,9 +1,8 @@
 import { mainApi } from "./apiUrl/mainApiUrl";
 import {ArticleList} from "../js/ArticleList.js";
-import {headerUserName} from "../js/consts/const.js";
+import {constsList} from "../js/consts/const.js";
 const articleList = new ArticleList(document.querySelector('#savingCards'));
-const pageTitle = document.querySelector('.saving-description__title');
-const pageSubtitle = document.querySelector('.saving-description__subtitle');
+
 
 export function savedCardsLoad() {
 
@@ -54,16 +53,16 @@ for (let len = keywordsList.length, i = len; --i >= 0;) {
   })
   if((dat.data.length>1)&&(keywordsList[1])&&(keywordsList[3])) {
 console.log()
-		pageTitle.textContent =  headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
-		pageSubtitle.textContent = 'По ключевым словам:'+ ' '+ keywordsList[0] +', ' + keywordsList[1] + ' и ' + uniqueKeywordsSum + ' другим'
+		constsList.pageTitle.textContent =  constsList.headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
+		constsList.pageSubtitle.textContent = 'По ключевым словам:'+ ' '+ keywordsList[0] +', ' + keywordsList[1] + ' и ' + uniqueKeywordsSum + ' другим'
   }
   else if ((keywordsList[2])) {
 	console.log()
-			pageTitle.textContent =  headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
-			pageSubtitle.textContent = 'По ключевым словам:'+ ' '+ keywordsList[0] +', ' + keywordsList[1] + ' и ' + keywordsList[2]
+			constsList.pageTitle.textContent =  constsList.headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
+			constsList.pageSubtitle.textContent = 'По ключевым словам:'+ ' '+ keywordsList[0] +', ' + keywordsList[1] + ' и ' + keywordsList[2]
 	  }
   else {
-	pageTitle.textContent =  headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
+	constsList.pageTitle.textContent =  constsList.headerUserName.textContent +', у вас '+ dat.data.length + ' сохраненных статей';
   }
 	})
 		

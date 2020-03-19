@@ -29,13 +29,20 @@ const headerAuthorizatioNameBlock = document.querySelector('.header__authorizati
 const card = document.querySelector('.card');
 const noCards = document.querySelector('.cards__no-cards');
 const registerSuccess = document.querySelector('#registerSuccess');
+const errorPopup = document.querySelector('#errorPopup');
+const errorPopupText = document.querySelector('#errorPopupText');
+const errorPopupClose = document.querySelector('#errorPopupClose');
 const enterButton = document.querySelector('#enterButton');
 const registerSuccessToLogin = document.querySelector('#closeRegisterSuccess');
 const loginFormCloseSpace = document.querySelector('.login-form__close-space');
 const mobileMenu = document.querySelector('.header__mobile-menu');
 const mobileMenuBack = document.querySelector('.header__mobile-back');
-export const constsList = {mobileMenuBack,mobileMenu,headerAuthorizatioNameBlock, headerAuth, headerNonAuth };
- 
-export {popupAuth,enterButton, loginFormCloseSpace, registerEmailError, loginPasswordError, registerNameError,  cardsFound, savePage, cardsFoundTitle,  headerTitle, popupRegiEnter, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
-    popupAuthWin, popupAuthClose, popupRegi, registerPasError, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
-    registerButton, loginEmailError}
+const cardsBlock = document.querySelector('.cards__block');
+const pageTitle = document.querySelector('.saving-description__title');
+const pageSubtitle = document.querySelector('.saving-description__subtitle');
+const regSendError= document.querySelector('#regSendError');
+const loginSendError = document.querySelector('#loginSendError');
+export const constsList = {loginSendError, regSendError, errorPopupClose, errorPopup, errorPopupText, pageTitle, pageSubtitle, cardsBlock, mobileMenuBack,mobileMenu,headerAuthorizatioNameBlock, headerAuth, headerNonAuth, popupAuth,enterButton, loginFormCloseSpace, registerEmailError, loginPasswordError, registerNameError,  cardsFound, savePage, cardsFoundTitle,  headerTitle, popupRegiEnter, noCards, card, registerSuccess, registerSuccessToLogin, headerUserName, searchButton,  searchError, searchForm, 
+	popupAuthWin, popupAuthClose, popupRegi, registerPasError, popupRegClose, popupRegiWin, loginEmailForm, registerEmailForm, cardsFoundMore, loginButton, 
+	registerButton, loginEmailError };
+

@@ -1,18 +1,18 @@
-import {loginFormCloseSpace, registerSuccess, enterButton, popupAuthWin} from "../js/consts/const.js";
+import {constsList} from "../js/consts/const.js";
 
 export function registerSuccessToLogin() {
 	
 
-	enterButton.addEventListener('click', openAuth);
-	loginFormCloseSpace.addEventListener('click', underFormSpace)
-	  function underFormSpace() {
-		loginFormCloseSpace.classList.add('inactive');
-		registerSuccess.classList.add('inactive');
+	constsList.enterButton.addEventListener('click', openAuth);
+	constsList.loginFormCloseSpace.addEventListener('click', underFormSpace)
+	function underFormSpace() {
+		constsList.loginFormCloseSpace.classList.add('inactive');
+		constsList.registerSuccess.classList.add('inactive');
 
-	  }
-	  function openAuth() {
-		popupAuthWin.classList.remove("inactive");
-		loginFormCloseSpace.classList.remove('inactive');
-		registerSuccess.classList.add('inactive');
-	  }
+	}
+	function openAuth() {
+		constsList.popupAuthWin.classList.remove("inactive");
+		constsList.loginFormCloseSpace.classList.remove('inactive');
+		constsList.registerSuccess.classList.add('inactive');
+	}
 }

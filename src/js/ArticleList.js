@@ -1,6 +1,5 @@
 import {Article} from "../js/Article.js";
-import { getUserName } from "../js/getUserName";
-const check = document.querySelector('.header__authorization');
+import {constsList} from "../js/consts/const.js";
 export class ArticleList {
 	constructor(articleContainer, arr) {
 		this.articleContainer = articleContainer;
@@ -14,7 +13,7 @@ export class ArticleList {
 		this.articles.push(articleElement);
 		
 		this.articleContainer.appendChild(articleElement);
-		if(check.classList.contains('inactive')) {
+		if(constsList.headerAuth.classList.contains('inactive')) {
 			articleElement.setAttribute('auth', false);
 			cardBlockImage.classList.add('block-image__non-auth');
 			cardKeyText.textContent="Войдите, чтобы сохранять статьи"
@@ -25,7 +24,7 @@ export class ArticleList {
 			cardBlockImage.setAttribute('auth', true)
 			cardKeyText.textContent="Нажмите, чтобы сохранить"
 		}
-	
+		
 		
 	}
 	getArticle(date, title, text, source, urlToImage, id) {
@@ -37,8 +36,8 @@ export class ArticleList {
 		articleElement.setAttribute('id', id);
 		const cardBlockImage = articleElement.querySelector('.card-block-image')
 		const cardKeyText = articleElement.querySelector('.card__key-text');
-	
-		if(check.classList.contains('inactive')) {
+		
+		if(constsList.headerAuth.classList.contains('inactive')) {
 			articleElement.setAttribute('saved', false);
 			
 		}
@@ -53,6 +52,6 @@ export class ArticleList {
 			cardKeyText.textContent="Нажмите, чтобы удалить"
 		}
 
-	
+		
 	}
 }
