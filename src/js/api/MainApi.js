@@ -54,9 +54,17 @@ signIn(userEmail, userPassword) {
 			email:userEmail,
 			password: userPassword
 	})})
-.then(res => res.json())
-	.then((data) => {
-		localStorage.setItem('token', data.token);
+	.then((res) => {
+		if (res.ok) {
+			res.json()
+		.then((data) => {
+			localStorage.setItem('token', data.token);
+		})
+		
+		}
+		else {
+			return Promise.reject(`Ошибка: ${res.status}`)
+		}
 	})
 	
 }

@@ -1,6 +1,8 @@
 import {buttonLoginLoading} from "../buttonLoading.js";
 import {mainApi} from "../apiUrl/mainApiUrl.js";
 import {constsList} from "../consts/const.js";
+import {reload} from "../reload";
+import {errorsList} from "../consts/errors"
 
 
 export function loginFormSend(event) {
@@ -12,14 +14,17 @@ export function loginFormSend(event) {
 	const password = loginPassword.value;
 	mainApi.signIn(email, password)
 	.then(() => {
+	
 		constsList.loginButton.setAttribute('disabled', true);
         constsList.loginButton.classList.remove('button-active');
 		constsList.popupAuthWin.classList.add("inactive"), 10000;
 		form.reset();  
-		window.location.reload();
-	})
+		reload()
+		})
+	
+	
 	.catch((err) => {
-		console.log(err);	
+		constsList.loginSendError.textContent=errorsList.wrongEmailPassword;	
 	})
 
 	buttonLoginLoading();

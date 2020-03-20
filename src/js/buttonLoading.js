@@ -2,11 +2,15 @@ import {constsList} from "../js/consts/const.js";
 
 function buttonLoginLoading ()
 {
-	constsList.loginButton.textContent = 'Загрузка...';
+function loadAut() {
+	constsList.loginButton.textContent = 'Войти';
 }
-function load() {constsList.loginButton.textContent = 'Войти';
-setTimeout(load, 500)
+
+
+	setTimeout(loadAut, 500);
+constsList.loginButton.textContent = 'Загрузка...';
 }
+
 
 
 function buttonRegisterLoading () {
