@@ -1,8 +1,14 @@
  import {mainApi} from "../js/apiUrl/mainApiUrl.js";
+ import {constsList} from "../js/consts/const.js";
  export class Article {
- 	constructor(date, title, text, source, urlToImage) {
- 		this.date=date;
- 		this.articleElement = this.createArticle (date, title, text, source, urlToImage);
+ 	constructor(date, title, text, source, urlToImage,id) {
+		 this.date=date;
+		 this.title=title;
+		 this.text=text
+		 this.source=source;
+		 this.urlToImage=urlToImage;
+		 this.id=id
+ 		this.articleElement = this.createArticle (date, title, text, source, urlToImage,id);
  		
  		this.articleElement.querySelector('.card-block-image').addEventListener('click', this.articleMark);
  		this.articleElement.querySelector('.card-block-image').addEventListener('mouseover', this.imageWinPopup);
@@ -10,7 +16,7 @@
  	}
  	
 
- 	createArticle(dateValue, titleValue, textValue, sourceValue, urlToImage,imageUni) {
+ 	createArticle() {
  		const article = document.createElement('div');
  		const articleTopBlock = document.createElement('div');
  		const articleKeyBlock = document.createElement('div');
@@ -25,7 +31,7 @@
  		article.classList.add('card');
  		article.appendChild(articleTopBlock);
  		articleTopBlock.classList.add('card__top-block');
- 		articleTopBlock.setAttribute('style', 'background-image: url(' + urlToImage + ')');
+ 		articleTopBlock.setAttribute('style', 'background-image: url(' + this.urlToImage + ')');
  		articleTopBlock.appendChild(articleKeyBlock);
  		articleKeyBlock.classList.add('card__key-block');
  		articleKeyBlock.classList.add('right-key-block');
@@ -46,19 +52,25 @@
 
  		article.appendChild(articleCardDate);
 		 articleCardDate.classList.add('card__date');
-		 dateValue = 
-		 dateValue.substr(0,10);
+		 this.date = 
+		 this.date.substr(0,10);
 		
- 		articleCardDate.textContent = dateValue;
+ 		articleCardDate.textContent = this.date;
  		article.appendChild(articleCardTitle);
  		articleCardTitle.classList.add('card__title');
- 		articleCardTitle.textContent = titleValue;
+ 		articleCardTitle.textContent = this.title;
  		article.appendChild(articleCardText);
  		articleCardText.classList.add('card__text');
- 		articleCardText.textContent = textValue;
+ 		articleCardText.textContent = this.text;
  		article.appendChild(articleCardSource);
  		articleCardSource.classList.add('card__source')
- 		articleCardSource.textContent = sourceValue;
+		 articleCardSource.textContent = this.source;
+		
+		 article.setAttribute('id', this.id);
+		 const cardBlockImage = article.querySelector('.card-block-image');
+	
+		
+	
  		return article;
  		
  	}

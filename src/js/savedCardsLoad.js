@@ -3,15 +3,20 @@ import {ArticleList} from "../js/ArticleList.js";
 import {constsList} from "../js/consts/const.js";
 const articleList = new ArticleList(document.querySelector('#savingCards'));
 
+import {Article} from "../js/Article.js";
 
 export function savedCardsLoad() {
 
 	
    mainApi.getCurrentArticles()
     .then((dat) => {
-	
+
 		dat.data.forEach(function(item, i, arr, id) {
-			articleList.getArticle(dat.data[i].date, dat.data[i].title, dat.data[i].text, dat.data[i].source, dat.data[i].image, dat.data[i]._id);
+			const article=new Article(dat.data[i].date, dat.data[i].title, dat.data[i].text, dat.data[i].source, dat.data[i].image, dat.data[i]._id)
+			
+			console.log(article)
+			
+			articleList.getArticle(article);
 		
 		
 			

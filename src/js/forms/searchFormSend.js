@@ -3,7 +3,7 @@ import {ArticleList} from "../ArticleList";
 import {newsApi} from "../apiUrl/newsApiUrl.js";
 
 import {constsList} from "../consts/const.js"
-
+import {Article} from "../Article.js";
 const articleList = new ArticleList(document.querySelector('.cards__block'));
 export function searchFormSend(event) {
 	event.preventDefault();
@@ -24,17 +24,22 @@ export function searchFormSend(event) {
 			constsList.cardsFoundTitle.classList.remove('inactive');
 			constsList.cardsFoundMore.classList.remove('inactive');
 		}
-		console.log(dat.articles.length);
+	
 		let articlesLength = 3;
 		if(dat.articles.length>0){
 			for (let i=0; i < articlesLength; i++) {
-				
-				articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+		
+				const article = new Article(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+		
+				articleList.addArticle(article)
 			}
 		}
 		else {}
 			constsList.cardsFoundMore.addEventListener('click', cardsMore);
 		function cardsMore() {
+			
+
+
 			for (let o = 0; o<3; o++){
 				if(articlesLength<dat.articles.length){
 					articlesLength = articlesLength +1;
@@ -46,13 +51,12 @@ export function searchFormSend(event) {
 				
 			}
 			
-			while (constsList.cardsBlock.firstChild) {
-				constsList.cardsBlock.removeChild(constsList.cardsBlock.firstChild);
-			};
 			
-			for (let i=0; i < articlesLength; i++) {
-				
-				articleList.addArticle(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i].id)
+			
+			for (let i=articleList.articles.length; i < articlesLength; i++) {
+				console.log(articleList)
+				const article = new Article(dat.articles[i].publishedAt, dat.articles[i].title, dat.articles[i].description, dat.articles[i].source.name, dat.articles[i].urlToImage, dat.articles[i]._id)
+				articleList.addArticle(article)
 			}
 		}
 

@@ -1,56 +1,75 @@
 import {Article} from "../js/Article.js";
 import {constsList} from "../js/consts/const.js";
+import { mainApi } from "../js/apiUrl/mainApiUrl";
 export class ArticleList {
-	constructor(articleContainer, arr) {
+	constructor(articleContainer) {
 		this.articleContainer = articleContainer;
 		this.articles = [];
+		
 	}
-	addArticle(date, title, text, source, urlToImage, id) {
+	addArticle(article) {
+		mainApi.getCurrentArticles()
+		.then((dat) => {
+	
+		dat.data.forEach((item,index,array) => {
+			if (item.link === article.urlToImage) {
+				cardBlockImage.classList.remove('block-image__non-marked');
+				cardBlockImage.classList.add('block-image__marked');
+				cardBlockImage.removeAttribute('auth');
+				cardKeyText.textContent="Новость уже сохранена"
+
+	
+			}
+					})
+			
+		})
+
 		
-		const {articleElement} = new Article(date, title, text, source, urlToImage);
-		const cardBlockImage = articleElement.querySelector('.card-block-image')
-		const cardKeyText = articleElement.querySelector('.card__key-text');
-		this.articles.push(articleElement);
+		.catch((err) => {
+			console.log(err)
+		})
+		const cardBlockImage = article.articleElement.querySelector('.card-block-image');
+		const cardKeyText = article.articleElement.querySelector('.card__key-text');
 		
-		this.articleContainer.appendChild(articleElement);
+		
 		if(constsList.headerAuth.classList.contains('inactive')) {
-			articleElement.setAttribute('auth', false);
+			article.articleElement.setAttribute('auth', false);
 			cardBlockImage.classList.add('block-image__non-auth');
 			cardKeyText.textContent="Войдите, чтобы сохранять статьи"
 		}
 		else {
-			articleElement.setAttribute('auth', true);
+			article.articleElement.setAttribute('auth', true);
 			cardBlockImage.classList.add('block-image__non-marked');
 			cardBlockImage.setAttribute('auth', true)
 			cardKeyText.textContent="Нажмите, чтобы сохранить"
 		}
+		this.articles.push(article);
+		
+		this.articleContainer.appendChild(article.articleElement);
+		
 		
 		
 	}
-	getArticle(date, title, text, source, urlToImage, id) {
-		
-		
-		const {articleElement} = new Article(date, title, text, source, urlToImage);
-		this.articles.push(articleElement);
-		this.articleContainer.appendChild(articleElement);
-		articleElement.setAttribute('id', id);
-		const cardBlockImage = articleElement.querySelector('.card-block-image')
-		const cardKeyText = articleElement.querySelector('.card__key-text');
-		
+	getArticle(article) {
+	
+		const cardBlockImage = article.articleElement.querySelector('.card-block-image');
+		const cardKeyText = article.articleElement.querySelector('.card__key-text');
 		if(constsList.headerAuth.classList.contains('inactive')) {
-			articleElement.setAttribute('saved', false);
+			article.articleElement.setAttribute('saved', false);
 			
 		}
 		else {
-			articleElement.setAttribute('saved', true);
+			article.articleElement.setAttribute('saved', true);
 			
 		}
-		if (articleElement.hasAttribute('saved')) {
+		if (article.articleElement.hasAttribute('saved')) {
 			
 			cardBlockImage.classList.add('block-image__delete');
 			cardBlockImage.setAttribute('saved', true)
 			cardKeyText.textContent="Нажмите, чтобы удалить"
 		}
+		this.articles.push(article);
+		this.articleContainer.appendChild(article.articleElement);
 
 		
 	}
