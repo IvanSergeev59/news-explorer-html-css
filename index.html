@@ -1,150 +1,159 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>	
- 	<meta charset="UTF-8">
+<head>	
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Ivan Sergeev"> 
 	<meta name="description" content="news-explorer">
 	<title>news-explorer</title>
-	<link rel="stylesheet" href="style.c87d2d99083c9e0122e1.css">
+	<link rel="stylesheet" href="style.7e359d3dfd478e49dc1d.css">
 	<link rel="shortcut icon" href="images/images/89c5b2523d4b2446bcf12515590a279b.ico" type="image/x-icon">
- </head>
-	<body class="body">
-		<div class="page">
-			<header class="header header__border-white">
-				<img class="header__mobile-menu  inactive" src="images/images/3e43c1c7c1670e3f2976959528f5ee12.png" alt="mobile-menu-button">
-				<img class="header__mobile-back" src="images/images/6e4a97d36853017a9dd3429b8b2e326e.png" alt ="close-mobile-menu">
-				<div class="header__title">NewsExplorer</div>
-				<div class="header__authorization header__white-back inactive">
-					<div class="header__page header__page_main-margin">
-						<a class="header__page_title" href="index.html">Главная</a>
-						<div class="header__page_underline"></div>
-						</div>
-						<div class="header__page header__page_margin">
-							<div class="header__page_title header__grey-text" id="savePage"><a href="index__second-page.html">Сохранённые статьи</a></div>
-						</div>
-						<div class="header__authorization-name-block">
-							<div class="header__authorization-name "></div>
-						 <img class="authorization-name_image" src="images/images/fc94b57634caf2637dfdb4a9d378623b.png" alt="auth-image"> 
-						</div>
-					</div>
-				   <div class="header__non-authorization">
-						<div class="header__page header__page_margin">
-							<p class="header__page_title">Главная</p>
-							<div class="header__page_underline"></div>
-						</div>
-						<div class="non-authorization__margin" id="geg">
-							<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
-						</div>
-								
-					</div>
-			</header>
-				<div class="content">
-					<div class="search">
-						<h1 class="search__title">Что в мире творится?</h1>
-						<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
-						<form class="search__form" name="search">
-							<input type="text"  minlength="2" class="search__form_text-default" placeholder="Введите тему новости" name="searchName">
-							<button class="search__button" disabled="true">
-								Искать
-							</button>
-							<p class="login-form__error" id="searchError"></p>
-						</form>
+</head>
+<body class="body">
+	<div class="page">
+		<header class="header header__border-white">
+			<img class="header__mobile-menu" src="images/images/3e43c1c7c1670e3f2976959528f5ee12.png" alt="mobile-menu-button">
+			<img class="header__mobile-back inactive" src="images/images/6e4a97d36853017a9dd3429b8b2e326e.png" alt ="close-mobile-menu">
+			<div class="header__title">NewsExplorer</div>
+			<div class="header__authorization header__white-back inactive">
+				<div class="header__page header__page_main-margin">
+					<a class="header__page_title" href="index.html">Главная</a>
+					<div class="header__page_underline"></div>
+				</div>
+				<div class="header__page header__page_margin">
+					<div class="header__page_title header__grey-text" id="savePage"><a href="index__second-page.html">Сохранённые статьи</a></div>
+				</div>
+				<div class="header__authorization-name-block">
+					<div class="header__authorization-name "></div>
+					<img class="authorization-name_image" src="images/images/fc94b57634caf2637dfdb4a9d378623b.png" alt="auth-image"> 
+				</div>
+			</div>
+			<div class="header__non-authorization">
+				<div class="header__page header__page_margin">
+					<p class="header__page_title">Главная</p>
+					<div class="header__page_underline"></div>
+				</div>
+				<div class="non-authorization__margin" id="geg">
+					<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
+				</div>
+				
+			</div>
+		</header>
+		<div class="content">
+			<div class="search">
+				<h1 class="search__title">Что в мире творится?</h1>
+				<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
+				<form class="search__form" name="search">
+					<input type="text"  minlength="2" class="search__form_text-default" placeholder="Введите тему новости" name="searchName">
+					<button class="search__button" disabled="true">
+						Искать
+					</button>
+					<p class="login-form__error" id="searchError"></p>
+				</form>
+				
+			</div>
+			<div class="cards">
+				<div class="cards__no-cards inactive">
+					<img class="no-cards__image" src="images/images/8b8a8027ba18cd04edfdedac514d0a4c.png" alt="no-cards">
+					<h2 class="no-cards__title">Ничего не найдено</h2>
+					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
+				</div>
+				<div class="cards__found">
+					<h2 class="cards__found_title inactive">Результаты поиска</h2>
+					<div class="cards__block">
 						
 					</div>
-					<div class="cards">
-						<div class="cards__no-cards inactive">
-							<img class="no-cards__image" src="images/images/8b8a8027ba18cd04edfdedac514d0a4c.png" alt="no-cards">
-							<h2 class="no-cards__title">Ничего не найдено</h2>
- 					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
- 				</div>
- 				<div class="cards__found">
- 					<h2 class="cards__found_title inactive">Результаты поиска</h2>
- 					<div class="cards__block">
-	 					
-	 				</div>
-	 				<button class="cards__found_more inactive">
-	 					Показать ещё
-	 				</button>	
- 				</div>
- 			</div>
- 			<div class="about-author">
-						<img class="about-author__left-side" src="images/images/427e0c3afd1fde293127b96ade75c808.png" alt="avatar author">
-						<div class="about-author__right-side">
-							<h2 class="about-author__title">Об авторе</h2>
-								<p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>  <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
-						</div>
+					<button class="cards__found_more inactive">
+						Показать ещё
+					</button>	
+				</div>
 			</div>
-					<form class="login-form inactive" name="loginEmail">
-						<h2 class="login-form__title">Вход</h2>
-						<div class="login-form__header" >
-							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginMail">
-							<div class="login-form__header_underline"></div>
-						</div>
-						<p class="login-form__error" id="loginEmailError"></p>
-						<div class="login-form__header">
-								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPas">
-								<div class="login-form__header_underline"></div>
-						</div>
-						<p class="login-form__error" id="loginPassError"></p>
-						<button class="login-form__button" id="loginButton" disabled="true">
-							Войти
-						</button>
-						<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
-						<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="login-form close" id="close2">
-					</form>
-					<form class="login-form-register inactive" name="regEmail" id="regEmailForm">
-					   <h2 class="login-form__title">Регистрация</h2>
-					   <div class="login-form__header" >
-						   <h3 class="login-form__header_subtitle">Email</h3>
-						   <input class="login__form_text" minlength="2" placeholder="Введите почту" name="regMail">
-						   <div class="login-form__header_underline"></div>
-					   </div>
-					   <p class="login-form__error form-error__margin-email" id="regEmailError"></p>
-					   <div class="login-form__header" name="regPass">
-							   <h3 class="login-form__header_subtitle">Пароль</h3>
-							   <input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPas">
-							   <div class="login-form__header_underline"></div>
-					   </div>
-					   <p class="login-form__error form-error__margin-email" id="regPasError"></p>
-					   <div class="login-form__header" name="regName">
-							   <h3 class="login-form__header_subtitle">Имя</h3>
-							   <input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNam">
-							   <div class="login-form__header_underline"></div>
-					   </div>
-					   <p class="login-form__error form-error__margin-register" id="regNameError"></p>
-					   <button class="login-form__button" id="registerButton" disabled="true">
-						   Зарегистрироваться
-					   </button>
-					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
-						<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="close1" >
-					</form>
-					<form class="login-form-register inactive" name="registerSuccess"
-					id="registerSuccess">
-						<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
-						 <div class="login-form__button-success" id="enterButton">
-						   Выполнить вход
-					   </div>
-					   <img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="closeRegisterSuccess">
-					</form>
-					<div class="login-form__close-space inactive"></div>
-  				</div>
-					<footer class="footer">
-						<ul class="footer">
-						<li class="footer__copyright">&copy; 2020 Supersite, Powered by News API
-						</li>
-						<li class="footer-left-text footer__text "><a >Главная</a></li>
-						<li  class=" footer__text footer-right-text"><a>Яндекс.Практикум</a></li>
-						<li class="footer__social-left"><img src="images/images/36c708210f438d204f15ea8ab94e2f15.png" alt="github-icon"></li>
-						<li class="footer__social-right"><img src="images/images/1cce733204723d939041bc87d85aa569.png" alt="fb-icon"></li>
-						</ul>
-				</footer>
+			<div class="about-author">
+				<img class="about-author__left-side" src="images/images/427e0c3afd1fde293127b96ade75c808.png" alt="avatar author">
+				<div class="about-author__right-side">
+					<h2 class="about-author__title">Об авторе</h2>
+					<p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>  <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+				</div>
 			</div>
-			<script src="main.7c6519a7801416f35aec.js"></script>
-		</body>
-		</html>
+			<form class="login-form inactive" name="loginEmail">
+				<h2 class="login-form__title">Вход</h2>
+				<div class="login-form__header" >
+					<h3 class="login-form__subtitle">Email</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginEmailInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error" id="loginEmailError"></p>
+				<div class="login-form__header">
+					<h3 class="login-form__subtitle">Пароль</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPasswordInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error" id="loginPassError"></p>
+				<p class="login-form__error" id="loginSendError"></p>
+				<button class="login-form__button" id="loginButton" disabled="true">
+					Войти
+				</button>
+				<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
+				<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="login-form close" id="close2">
+			</form>
+			<form class="login-form-register inactive" name="regEmail" id="regEmailForm">
+				<h2 class="login-form__title">Регистрация</h2>
+				<div class="login-form__header" >
+					<h3 class="login-form__header_subtitle">Email</h3>
+					<input class="login__form_text" minlength="2" placeholder="Введите почту" name="regEmailInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-email" id="regEmailError"></p>
+				<div class="login-form__header" name="regPass">
+					<h3 class="login-form__header_subtitle">Пароль</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPasInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-email" id="regPasError"></p>
+				<div class="login-form__header" name="regName">
+					<h3 class="login-form__header_subtitle">Имя</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNameInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-register" id="regNameError"></p>
+				<p class="login-form__error form-error__margin-register" id="regSendError"></p>
+				<button class="login-form__button" id="registerButton" disabled="true">
+					Зарегистрироваться
+				</button>
+				<h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
+				<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="close1" >
+			</form>
+			<form class="login-form-register inactive" name="registerSuccess"
+			id="registerSuccess">
+			<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
+			<div class="login-form__button-success" id="enterButton">
+				Выполнить вход
+			</div>
+			<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="closeRegisterSuccess">
+		</form>
+		<form class="login-form-register inactive" name="errorPopup"
+			id="errorPopup">
+			<div class="login-form__button-success" id="errorPopupText">
+			
+			</div>
+			<img class="login-form__close" src="images/images/ccf0353f7ca2e26d3d55f34c9fc188f2.png" alt="form-close-button" id="errorPopupClose">
+		</form>
+		<div class="login-form__close-space inactive"></div>
+	</div>
+	<footer class="footer">
+		<ul class="footer">
+			<li class="footer__copyright">&copy; 2020 Supersite, Powered by News API
+			</li>
+			<li class="footer-left-text footer__text "><a >Главная</a></li>
+			<li  class=" footer__text footer-right-text"><a>Яндекс.Практикум</a></li>
+			<li class="footer__social-left"><img src="images/images/36c708210f438d204f15ea8ab94e2f15.png" alt="github-icon"></li>
+			<li class="footer__social-right"><img src="images/images/1cce733204723d939041bc87d85aa569.png" alt="fb-icon"></li>
+		</ul>
+	</footer>
+</div>
+<script src="main.68572feaa2d60316e47d.js"></script>
+</body>
+</html>
 
 
 
