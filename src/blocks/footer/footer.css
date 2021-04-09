@@ -10,6 +10,7 @@ position: relative;
 @media (max-width: 1440px) {
 	.footer {
 display: flex;
+width:100%;
 position: relative;
 margin-top: 61px;
 }

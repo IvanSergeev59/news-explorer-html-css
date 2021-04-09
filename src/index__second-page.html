@@ -1,151 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>	
- 	<meta charset="UTF-8">
+<head>	
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Ivan Sergeev"> 
 	<meta name="description" content="news-explorer">
-    <title>Saved cards</title>
+	<title>Saved cards</title>
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 	<link rel="shortcut icon" href="<%=require('./images/group.ico')%>" type="image/x-icon">
- </head>
- <div class="body">
+</head>
+<div class="body">
 	
- 	<div class="page">
- 		<header class="header header__border-grey">
-			<img class="header__mobile-menu " src="<%=require('./images/menu-black.png')%>" alt="mobile-menu-button">
-			<img class="header__mobile-back inactive " src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
- 			<div class="header__title black-title">NewsExplorer</div>
- 			<div class="header__authorization  authorization_black-text">
- 				<div class="header__page header__page_main-margin">
-			 		<p class="header__page_title "><a href="index.html">Главная</a></p>
-			 		
-			 		</div>
-			 		<div class="header__page header__page_margin">
-						 <div class="header__page_title"><a href="index__second-page.html">Сохранённые статьи</a></div>
-						 <div class="header__page_underline black-line"></div>
-			 		</div>
-			 		<div class="header__authorization-name-block">
-			 			<div class="header__authorization-name">Грета</div>
-			 		
-			 			<img class="authorization-name_image" src="<%=require('./images/logout-black.png')%>" alt="out-authorization button">
-					</div>
+	<div class="page">
+		<header class="header header__border-grey">
+			<img class="header__mobile-menu" src="<%=require('./images/menu-black.png')%>" alt="mobile-menu-button">
+			<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
+			<div class="header__title black-title">NewsExplorer</div>
+			<div class="header__authorization  authorization_black-text">
+				<div class="header__page header__page_main-margin">
+					<p class="header__page_title "><a href="index.html">Главная</a></p>
+					
 				</div>
-			</header>
-			<div class="content">
-				<div class="saving-description">
-					<h3 class="saving-description__navigation">Сохранённые статьи</h3>
-					<h1 class="saving-description__title">Грета, у вас 5 сохранённых статей</h1>
-					<h2 class="saving-description__subtitle">По ключевым словам: Природа, Тайга и 2 другим</h2>
+				<div class="header__page header__page_margin">
+					<div class="header__page_title"><a href="index__second-page.html">Сохранённые статьи</a></div>
+					<div class="header__page_underline black-line"></div>
 				</div>
-				<div class="cards">
-					<div class="cards__block">
-						<div class="card">
-							<div class="card__top-block background-06">
-								<div class="card__key-block right-key-block">
-								<div class="card-block-image block-image__delete"></div>
-								</div>
-								<div class="card__key-block middle-key-block">
-									<p class="card__key-text">Убрать из сохранённых</p>
-								</div>
-								<div class="card__key-block left-key-block">
-									<p class="card__key-text ">Природа</p>
-								</div>
-							</div>
-							<div class="card__bottom-block"></div>
-							<h3 class="card__date">2 августа, 2019</h3>
-							<h2 class="card__title">Национальное достояние – парки</h2>
-							<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-							<h4 class="card__source">ДЗЕН</h4>
-						</div>
-						<div class="card">
-							<div class="card__top-block background-01">
-								<div class="card__key-block right-key-block">
-									<div class="card-block-image block-image__delete"></div>
-								</div>
-								<div class="card__key-block middle-key-block">
-									<p class="card__key-text ">Убрать из сохранённых</p>
-								</div>
-								<div class="card__key-block left-key-block">
-									<p class="card__key-text ">Природа</p>
-								</div>
-							</div>
-							<div class="card__bottom-block"></div>
-							<h3 class="card__date">2 августа, 2019</h3>
-							<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-							<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-							<h4 class="card__source">АФИША</h4>
-						</div>
-						<div class="card">
-							<div class="card__top-block background-05">
-								<div class="card__key-block right-key-block">
-									<div class="card-block-image block-image__delete"></div>
-								</div>
-								<div class="card__key-block middle-key-block">
-									<p class="card__key-text ">Убрать из сохранённых</p>
-								</div>
-								<div class="card__key-block left-key-block">
-									<p class="card__key-text ">Тайга</p>
-								</div>
-							</div>
-							<div class="card__bottom-block"></div>
-							<h3 class="card__date">2 августа, 2019</h3>
-							<h2 class="card__title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-							<p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-							<h4 class="card__source">МЕДИАЗОНА</h4>
-						</div>
-						<div class="card">
-							<div class="card__top-block background-06">
-								<div class="card__key-block right-key-block">
-									<div class="card-block-image block-image__delete"></div>
-								</div>
-								<div class="card__key-block middle-key-block">
-									<p class="card__key-text ">Убрать из сохранённых</p>
-								</div>
-								<div class="card__key-block left-key-block">
-									<p class="card__key-text ">Природа</p>
-								</div>
-								
-							</div>
-							<div class="card__bottom-block"></div>
-							<h3 class="card__date">2 августа, 2019</h3>
-							<h2 class="card__title">Национальное достояние – парки</h2>
-							<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-							<h4 class="card__source">ДЗЕН</h4>
-						</div>
-					   <div class="card">
-							<div class="card__top-block background-01">
-								<div class="card__key-block right-key-block">
-									<div class="card-block-image block-image__delete"></div>
-								</div>
-								<div class="card__key-block middle-key-block">
-									<p class="card__key-text ">Убрать из сохранённых</p>
-								</div>
-								<div class="card__key-block left-key-block">
-									<p class="card__key-text ">Природа</p>
-								</div>
-							</div>
-							<div class="card__bottom-block"></div>
-							<h3 class="card__date">2 августа, 2019</h3>
-							<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-							<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-							<h4 class="card__source">АФИША</h4>
-						</div>
-					</div>
+				<div class="header__authorization-name-block">
+					<div class="header__authorization-name"></div>
+					
+					<img class="authorization-name_image" src="<%=require('./images/logout-black.png')%>" alt="out-authorization button">
 				</div>
-				
 			</div>
-			<footer class="footer">
-				<ul class="footer">
-				<li class="footer__copyright">&copy; 2019 Supersite
-				</li>
-				<li class="footer__text footer-left-text">Главная</li>
-				<li class="footer__text footer-right-text">Яндекс.Практикум</li>
-			 <li class="footer__social-left"><img src="<%=require('./images/github.png')%>" alt="github-icon"></li>
-			 <li class="footer__social-right"><img src="<%=require('./images/fb.png')%>" alt="fb-icon"></li>
-			 </ul>
- 		</footer>
-	 </div>
-	 <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+			
+		</header>
+		<div class="content">
+			<div class="saving-description">
+				<h3 class="saving-description__navigation">Сохранённые статьи</h3>
+				<h1 class="saving-description__title"></h1>
+				<h2 class="saving-description__subtitle"></h2>
+			</div>
+			<div class="cards">
+				<div class="cards__block" id="savingCards">
+					
+				</div>
+			</div>
+		</div>
+		<form class="login-form inactive" name="loginEmail">
+			<h2 class="login-form__title">Вход</h2>
+			<div class="login-form__header" >
+				<h3 class="login-form__subtitle">Email</h3>
+				<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginMail">
+				<div class="login-form__header_underline"></div>
+			</div>
+			<p class="login-form__error" id="loginEmailError"></p>
+			<div class="login-form__header">
+				<h3 class="login-form__subtitle">Пароль</h3>
+				<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPas">
+				<div class="login-form__header_underline"></div>
+			</div>
+			<p class="login-form__error" id="loginPassError"></p>
+			<button class="login-form__button" id="loginButton">
+				Войти
+			</button>
+			<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
+			<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close" id="close2">
+		</form>
+		<form class="login-form-register inactive" name="regEmail">
+			<h2 class="login-form__title">Регистрация</h2>
+			<div class="login-form__header" >
+				<h3 class="login-form__header_subtitle">Email</h3>
+				<input class="login__form_text" minlength="2" placeholder="Введите почту" name="regMail">
+				<div class="login-form__header_underline"></div>
+			</div>
+			<p class="login-form__error form-error__margin-email" id="regEmailError"></p>
+			<div class="login-form__header" name="regPass">
+				<h3 class="login-form__header_subtitle">Пароль</h3>
+				<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPas">
+				<div class="login-form__header_underline"></div>
+			</div>
+			<p class="login-form__error form-error__margin-email" id="regPasError"></p>
+			<div class="login-form__header" name="regName">
+				<h3 class="login-form__header_subtitle">Имя</h3>
+				<input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNam">
+				<div class="login-form__header_underline"></div>
+			</div>
+			<p class="login-form__error form-error__margin-register" id="regNameError"></p>
+			<button class="login-form__button" id="registerButton">
+				Зарегистрироваться
+			</button>
+			<h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
+			<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="close1" >
+		</form>
+		<form class="login-form-register inactive" name="registerSuccess">
+			<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
+			<button class="login-form__button" id="enterButton">
+				Выполнить вход
+			</button>
+			<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="closeRegisterSuccess">
+		</form>
+
 	</div>
- </html>
+	<footer class="footer">
+		<ul class="footer">
+			<li class="footer__copyright">&copy; 2019 Supersite
+			</li>
+			<li class="footer__text footer-left-text">Главная</li>
+			<li class="footer__text footer-right-text">Яндекс.Практикум</li>
+			<li class="footer__social-left"><img src="<%=require('./images/github.png')%>" alt="github-icon"></li>
+			<li class="footer__social-right"><img src="<%=require('./images/fb.png')%>" alt="fb-icon"></li>
+		</ul>
+	</footer>
+</div>
+<script src="<%=htmlWebpackPlugin.files.chunks.second.entry %>"></script>
+</div>
+</html>

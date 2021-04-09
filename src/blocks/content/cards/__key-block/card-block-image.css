@@ -1,5 +1,6 @@
 @import url('__marked/block-image__marked.css');
 @import url('__non-marked/block-image__non-marked.css');
+@import url('__non-auth/block-image__non-auth.css');
 @import url('__delete/block-image__delete.css');
 .card-block-image{
 	margin:0 auto;

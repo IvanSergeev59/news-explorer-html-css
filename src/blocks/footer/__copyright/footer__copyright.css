@@ -36,6 +36,7 @@
 	display: flex;
 	position: absolute;
 	margin: 0;
+	width: 80%;
 	bottom:22px;
 	font-family: Roboto;
 	font-style: normal;
@@ -43,7 +44,7 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: #B6BCBF;
-	width: 100%;
+	
 }
 
 }

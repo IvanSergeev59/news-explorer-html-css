@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // добавили плагин
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: { 
+second: './src/second.js',
+main: './src/index.js' },
+  
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'

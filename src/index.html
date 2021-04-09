@@ -1,181 +1,159 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>	
- 	<meta charset="UTF-8">
+<head>	
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Ivan Sergeev"> 
 	<meta name="description" content="news-explorer">
 	<title>news-explorer</title>
 	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 	<link rel="shortcut icon" href="<%=require('./images/group.ico')%>" type="image/x-icon">
- </head>
-	<body class="body">
-		<div class="page">
-			<header class="header header__border-white">
-				<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
-				<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
-				<div class="header__title">NewsExplorer</div>
-				<div class="header__authorization header__white-back ">
-					<div class="header__page header__page_main-margin">
-						<a class="header__page_title" href="index.html">Главная</a>
-						<div class="header__page_underline"></div>
-						</div>
-						<div class="header__page header__page_margin">
-							<div class="header__page_title header__grey-text"><a href="index__second-page.html">Сохранённые статьи</a></div>
-						</div>
-						<div class="header__authorization-name-block">
-							<div class="header__authorization-name ">Грета</div>
-						 <img class="authorization-name_image" src="<%=require('./images/logout-white.png')%>" alt="auth-image"> 
-						</div>
-					</div>
-				   <div class="header__non-authorization">
-						<div class="header__page header__page_margin">
-							<p class="header__page_title">Главная</p>
-							<div class="header__page_underline"></div>
-						</div>
-						<div class="non-authorization__margin">
-							<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
-						</div>
-								
-					</div>
-			</header>
-				<div class="content">
-					<div class="search">
-						<h1 class="search__title">Что в мире творится?</h1>
-						<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
-						<form class="search__form">
-							<input type="text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" class="search__form_text-default" placeholder="Введите тему новости">
-							<button class="search__button">
-								Искать
-							</button>
-						</form>
-					</div>
-					<div class="cards">
-						<div class="cards__no-cards inactive">
-							<img class="no-cards__image" src="<%=require('./images/not-found_v1.png')%>" alt="no-cards">
-							<h2 class="no-cards__title">Ничего не найдено</h2>
- 					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
- 				</div>
- 				<div class="cards__found">
- 					<h2 class="cards__found_title">Результаты поиска</h2>
- 					<div class="cards__block">
-	 					<div class="card">
-	 						<div class="card__top-block background-08">
-	 							<div class="card__key-block right-key-block">
- 								<div class="card-block-image block-image__non-marked" ></div>
- 								</div>
-	 						</div>
-	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card__date">2 августа, 2019</h3>
-	 						<h2 class="card__title">Национальное достояние – парки</h2>
-	 						<p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-	 						<h4 class="card__source">ДЗЕН</h4>
-	 					</div>
-	 					<div class="card">
-	 						<div class="card__top-block background-04">
-
-	 							<div class="card__key-block right-key-block">
- 								<div class="card-block-image block-image__marked" ></div>
- 								</div>
-							
- 								</div>
- 							
-	 						
-	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card__date">2 августа, 2019</h3>
-	 						<h2 class="card__title">Лесные огоньки: история одной фотографии</h2>
-	 						<p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-	 						<h4 class="card__source">АФИША</h4>
-	 					</div>
-	 					<div class="card">
-	 						<div class="card__top-block background-07">
-	 							<div class="card__key-block right-key-block">
- 								<div class="card-block-image block-image__non-marked" ></div>
- 								</div>
- 									<div class="card__key-block key-text-hidden">
- 								<p class="card__key-text ">Войдите, чтобы сохранять статьи</p>
- 							</div>
-	 						</div>
-	 						<div class="card__bottom-block"></div>
-	 						<h3 class="card__date">2 августа, 2019</h3>
-		 					<h2 class="card__title">Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-	 						<p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-	 						<h4 class="card__source">МЕДИАЗОНА</h4>
-	 					</div>
-	 				</div>
-	 				<button class="cards__found_more">
-	 					Показать ещё
-	 				</button>	
- 				</div>
- 			</div>
- 			<div class="about-author">
-						<img class="about-author__left-side" src="<%=require('./images/avatar.png')%>" alt="avatar author">
-						<div class="about-author__right-side">
-							<h2 class="about-author__title">Об авторе</h2>
-								<p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>  <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
-						</div>
+</head>
+<body class="body">
+	<div class="page">
+		<header class="header header__border-white">
+			<img class="header__mobile-menu" src="<%=require('./images/menu.png')%>" alt="mobile-menu-button">
+			<img class="header__mobile-back inactive" src="<%=require('./images/back.png')%>" alt ="close-mobile-menu">
+			<div class="header__title">NewsExplorer</div>
+			<div class="header__authorization header__white-back inactive">
+				<div class="header__page header__page_main-margin">
+					<a class="header__page_title" href="index.html">Главная</a>
+					<div class="header__page_underline"></div>
+				</div>
+				<div class="header__page header__page_margin">
+					<div class="header__page_title header__grey-text" id="savePage"><a href="index__second-page.html">Сохранённые статьи</a></div>
+				</div>
+				<div class="header__authorization-name-block">
+					<div class="header__authorization-name "></div>
+					<img class="authorization-name_image" src="<%=require('./images/logout-white.png')%>" alt="auth-image"> 
+				</div>
 			</div>
-					<div class="login-form inactive">
-						<h2 class="login-form__title">Вход</h2>
-						<form class="login-form__header">
-							<h3 class="login-form__subtitle">Email</h3>
-							<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
-							<div class="login-form__header_underline"></div>
-						</form>
-						<p class="login-form__error">Неправильный формат email</p>
-						<form class="login-form__header">
-								<h3 class="login-form__subtitle">Пароль</h3>
-								<input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
-								<div class="login-form__header_underline"></div>
-						</form>
+			<div class="header__non-authorization">
+				<div class="header__page header__page_margin">
+					<p class="header__page_title">Главная</p>
+					<div class="header__page_underline"></div>
+				</div>
+				<div class="non-authorization__margin" id="geg">
+					<div class="header__authorization-name authorization-name-block_white-text">Авторизоваться</div>
+				</div>
+				
+			</div>
+		</header>
+		<div class="content">
+			<div class="search">
+				<h1 class="search__title">Что в мире творится?</h1>
+				<h2 class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h2>
+				<form class="search__form" name="search">
+					<input type="text"  minlength="2" class="search__form_text-default" placeholder="Введите тему новости" name="searchName">
+					<button class="search__button" disabled="true">
+						Искать
+					</button>
+					<p class="login-form__error" id="searchError"></p>
+				</form>
+				
+			</div>
+			<div class="cards">
+				<div class="cards__no-cards inactive">
+					<img class="no-cards__image" src="<%=require('./images/not-found_v1.png')%>" alt="no-cards">
+					<h2 class="no-cards__title">Ничего не найдено</h2>
+					<p class="no-cards__text">К сожалению по вашему запросу ничего не найдено.</p>
+				</div>
+				<div class="cards__found">
+					<h2 class="cards__found_title inactive">Результаты поиска</h2>
+					<div class="cards__block">
 						
-						<button class="login-form__button button-active" >
-							Войти
-						</button>
-						<h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Зарегистрироваться</a></h3>
-						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close">
 					</div>
-					<div class="login-form-register inactive">
-					   <h2 class="login-form__title">Регистрация</h2>
-					   <form class="login-form__header">
-						   <h3 class="login-form__header_subtitle">Email</h3>
-						   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите почту">
-						   <div class="login-form__header_underline"></div>
-					   </form>
-					   <p class="login-form__error form-error__margin-email">Неправильный формат email</p>
-					   <form class="login-form__header">
-							   <h3 class="login-form__header_subtitle">Пароль</h3>
-							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите пароль">
-							   <div class="login-form__header_underline"></div>
-					   </form>
-					   
-					   <form class="login-form__header">
-							   <h3 class="login-form__header_subtitle">Имя</h3>
-							   <input class="login__form_text" pattern="[A-Za-zА-Яа-яЁё]" minlength="2" placeholder="Введите своё имя">
-							   <div class="login-form__header_underline"></div>
-					   </form>
-					   <p class="login-form__error form-error__margin-register">Такой пользователь уже есть</p>
-					   <button class="login-form__button button-active" >
-						   Зарегистрироваться
-					   </button>
-					   <h3 class="login-form__signup">или <a class="login-form__signup-enter" href="index.html">Войти</a></h3>
-						<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button">
-					</div>
-  				</div>
-					<footer class="footer">
-						<ul class="footer">
-						<li class="footer__copyright">&copy; 2020 Supersite, Powered by News API
-						</li>
-						<li class="footer-left-text footer__text "><a >Главная</a></li>
-						<li  class=" footer__text footer-right-text"><a>Яндекс.Практикум</a></li>
-						<li class="footer__social-left"><img src="<%=require('./images/github.png')%>" alt="github-icon"></li>
-						<li class="footer__social-right"><img src="<%=require('./images/fb.png')%>" alt="fb-icon"></li>
-						</ul>
-				</footer>
+					<button class="cards__found_more inactive">
+						Показать ещё
+					</button>	
+				</div>
 			</div>
-			<script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-		</body>
-		</html>
+			<div class="about-author">
+				<img class="about-author__left-side" src="<%=require('./images/avatar.png')%>" alt="avatar author">
+				<div class="about-author__right-side">
+					<h2 class="about-author__title">Об авторе</h2>
+					<p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>  <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+				</div>
+			</div>
+			<form class="login-form inactive" name="loginEmail">
+				<h2 class="login-form__title">Вход</h2>
+				<div class="login-form__header" >
+					<h3 class="login-form__subtitle">Email</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите почту" name="loginEmailInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error" id="loginEmailError"></p>
+				<div class="login-form__header">
+					<h3 class="login-form__subtitle">Пароль</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="loginPasswordInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error" id="loginPassError"></p>
+				<p class="login-form__error" id="loginSendError"></p>
+				<button class="login-form__button" id="loginButton" disabled="true">
+					Войти
+				</button>
+				<h3 class="login-form__signup" >или <a class="login-form__signup-enter">Зарегистрироваться</a></h3>
+				<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="login-form close" id="close2">
+			</form>
+			<form class="login-form-register inactive" name="regEmail" id="regEmailForm">
+				<h2 class="login-form__title">Регистрация</h2>
+				<div class="login-form__header" >
+					<h3 class="login-form__header_subtitle">Email</h3>
+					<input class="login__form_text" minlength="2" placeholder="Введите почту" name="regEmailInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-email" id="regEmailError"></p>
+				<div class="login-form__header" name="regPass">
+					<h3 class="login-form__header_subtitle">Пароль</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите пароль" name="regPasInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-email" id="regPasError"></p>
+				<div class="login-form__header" name="regName">
+					<h3 class="login-form__header_subtitle">Имя</h3>
+					<input class="login__form_text"  minlength="2" placeholder="Введите своё имя" name="regNameInput">
+					<div class="login-form__header_underline"></div>
+				</div>
+				<p class="login-form__error form-error__margin-register" id="regNameError"></p>
+				<p class="login-form__error form-error__margin-register" id="regSendError"></p>
+				<button class="login-form__button" id="registerButton" disabled="true">
+					Зарегистрироваться
+				</button>
+				<h3 class="login-form__signup">или <a class="login-form__signup-enter" id ="login-form__signup-enter">Войти</a></h3>
+				<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="close1" >
+			</form>
+			<form class="login-form-register inactive" name="registerSuccess"
+			id="registerSuccess">
+			<h2 class="login-form__title">Пользователь успешно зарегистрирован</h2>
+			<div class="login-form__button-success" id="enterButton">
+				Выполнить вход
+			</div>
+			<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="closeRegisterSuccess">
+		</form>
+		<form class="login-form-register inactive" name="errorPopup"
+			id="errorPopup">
+			<div class="login-form__button-success" id="errorPopupText">
+			
+			</div>
+			<img class="login-form__close" src="<%=require('./images/back-white.png')%>" alt="form-close-button" id="errorPopupClose">
+		</form>
+		<div class="login-form__close-space inactive"></div>
+	</div>
+	<footer class="footer">
+		<ul class="footer">
+			<li class="footer__copyright">&copy; 2020 Supersite, Powered by News API
+			</li>
+			<li class="footer-left-text footer__text "><a >Главная</a></li>
+			<li  class=" footer__text footer-right-text"><a>Яндекс.Практикум</a></li>
+			<li class="footer__social-left"><img src="<%=require('./images/github.png')%>" alt="github-icon"></li>
+			<li class="footer__social-right"><img src="<%=require('./images/fb.png')%>" alt="fb-icon"></li>
+		</ul>
+	</footer>
+</div>
+<script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>
 
 
 
