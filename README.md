@@ -6,7 +6,7 @@ html
 webpack
 npm
 
-Github deploy URL: https://ivansergeev59.github.io/news-explorer-html-css/
+Github deploy URL: https://ivansergeev59.github.io/graduation_work_yandex_praktikum_html-css_js_adaptive/
 
 Local API:
 http://localhost:3000/
